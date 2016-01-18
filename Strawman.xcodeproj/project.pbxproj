@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		748ACCB6E1BCBA91CA2DC5F1 /* Pods_Strawman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B2C445A61D1644B875AEF2 /* Pods_Strawman.framework */; };
+		91FFD42D1C4CA86400E93E72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD4291C4CA86400E93E72 /* Assets.xcassets */; };
+		91FFD42E1C4CA86400E93E72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD42A1C4CA86400E93E72 /* LaunchScreen.storyboard */; };
+		91FFD42F1C4CA86400E93E72 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD42B1C4CA86400E93E72 /* Info.plist */; };
+		91FFD4301C4CA86400E93E72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD42C1C4CA86400E93E72 /* Images.xcassets */; };
+		91FFD4351C4CA88100E93E72 /* parse-library-1.12.0 in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD4311C4CA88100E93E72 /* parse-library-1.12.0 */; };
+		91FFD4361C4CA88100E93E72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD4331C4CA88100E93E72 /* Main.storyboard */; };
+		91FFD4371C4CA88100E93E72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4341C4CA88100E93E72 /* AppDelegate.swift */; };
+		91FFD44D1C4CA88B00E93E72 /* FbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4381C4CA88B00E93E72 /* FbLoginViewController.swift */; };
+		91FFD44E1C4CA88B00E93E72 /* BuyStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4391C4CA88B00E93E72 /* BuyStep1ViewController.swift */; };
+		91FFD44F1C4CA88B00E93E72 /* AboutMeNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD43A1C4CA88B00E93E72 /* AboutMeNavController.swift */; };
+		91FFD4501C4CA88B00E93E72 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD43B1C4CA88B00E93E72 /* MapViewController.swift */; };
+		91FFD4511C4CA88B00E93E72 /* tabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD43C1C4CA88B00E93E72 /* tabBarController.swift */; };
+		91FFD4521C4CA88B00E93E72 /* F-BLoginViewController-old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD43D1C4CA88B00E93E72 /* F-BLoginViewController-old.swift */; };
+		91FFD4531C4CA88B00E93E72 /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD43E1C4CA88B00E93E72 /* MyAnnotation.swift */; };
+		91FFD4541C4CA88B00E93E72 /* AboutMetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD43F1C4CA88B00E93E72 /* AboutMetableViewController.swift */; };
+		91FFD4551C4CA88B00E93E72 /* CookOnlieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4401C4CA88B00E93E72 /* CookOnlieTableViewController.swift */; };
+		91FFD4561C4CA88B00E93E72 /* CookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4411C4CA88B00E93E72 /* CookTableViewCell.swift */; };
+		91FFD4571C4CA88B00E93E72 /* CookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD4421C4CA88B00E93E72 /* CookTableViewCell.xib */; };
+		91FFD4581C4CA88B00E93E72 /* ForCookNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4431C4CA88B00E93E72 /* ForCookNavController.swift */; };
+		91FFD4591C4CA88B00E93E72 /* CookMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4441C4CA88B00E93E72 /* CookMovieViewController.swift */; };
+		91FFD45A1C4CA88B00E93E72 /* MyOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4451C4CA88B00E93E72 /* MyOrderTableViewController.swift */; };
+		91FFD45B1C4CA88B00E93E72 /* MyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4461C4CA88B00E93E72 /* MyDataViewController.swift */; };
+		91FFD45C1C4CA88B00E93E72 /* vagetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4471C4CA88B00E93E72 /* vagetable.swift */; };
+		91FFD45D1C4CA88B00E93E72 /* vageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4481C4CA88B00E93E72 /* vageList.swift */; };
+		91FFD45E1C4CA88B00E93E72 /* DataModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4491C4CA88B00E93E72 /* DataModal.swift */; };
+		91FFD45F1C4CA88B00E93E72 /* Json.json in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD44B1C4CA88B00E93E72 /* Json.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D2F3AA976FA26695CC97CB5 /* Pods-Strawman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strawman.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Strawman/Pods-Strawman.debug.xcconfig"; sourceTree = "<group>"; };
+		91FFD4141C4CA81000E93E72 /* Strawman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strawman.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91FFD4291C4CA86400E93E72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91FFD42A1C4CA86400E93E72 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		91FFD42B1C4CA86400E93E72 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91FFD42C1C4CA86400E93E72 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		91FFD4311C4CA88100E93E72 /* parse-library-1.12.0 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "parse-library-1.12.0"; path = "../../../Strawman/vagetableSale/parse-library-1.12.0"; sourceTree = "<group>"; };
+		91FFD4321C4CA88100E93E72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91FFD4341C4CA88100E93E72 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../Strawman/vagetableSale/AppDelegate.swift; sourceTree = "<group>"; };
+		91FFD4381C4CA88B00E93E72 /* FbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbLoginViewController.swift; sourceTree = "<group>"; };
+		91FFD4391C4CA88B00E93E72 /* BuyStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuyStep1ViewController.swift; path = ../BuyStep1ViewController.swift; sourceTree = "<group>"; };
+		91FFD43A1C4CA88B00E93E72 /* AboutMeNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutMeNavController.swift; path = ../AboutMeNavController.swift; sourceTree = "<group>"; };
+		91FFD43B1C4CA88B00E93E72 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		91FFD43C1C4CA88B00E93E72 /* tabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tabBarController.swift; path = ../tabBarController.swift; sourceTree = "<group>"; };
+		91FFD43D1C4CA88B00E93E72 /* F-BLoginViewController-old.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "F-BLoginViewController-old.swift"; sourceTree = "<group>"; };
+		91FFD43E1C4CA88B00E93E72 /* MyAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
+		91FFD43F1C4CA88B00E93E72 /* AboutMetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutMetableViewController.swift; path = ../AboutMetableViewController.swift; sourceTree = "<group>"; };
+		91FFD4401C4CA88B00E93E72 /* CookOnlieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookOnlieTableViewController.swift; path = ../CookOnlieTableViewController.swift; sourceTree = "<group>"; };
+		91FFD4411C4CA88B00E93E72 /* CookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookTableViewCell.swift; path = ../CookTableViewCell.swift; sourceTree = "<group>"; };
+		91FFD4421C4CA88B00E93E72 /* CookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CookTableViewCell.xib; path = ../CookTableViewCell.xib; sourceTree = "<group>"; };
+		91FFD4431C4CA88B00E93E72 /* ForCookNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForCookNavController.swift; path = ../ForCookNavController.swift; sourceTree = "<group>"; };
+		91FFD4441C4CA88B00E93E72 /* CookMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookMovieViewController.swift; path = ../CookMovieViewController.swift; sourceTree = "<group>"; };
+		91FFD4451C4CA88B00E93E72 /* MyOrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrderTableViewController.swift; sourceTree = "<group>"; };
+		91FFD4461C4CA88B00E93E72 /* MyDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDataViewController.swift; sourceTree = "<group>"; };
+		91FFD4471C4CA88B00E93E72 /* vagetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vagetable.swift; sourceTree = "<group>"; };
+		91FFD4481C4CA88B00E93E72 /* vageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vageList.swift; path = ../vageList.swift; sourceTree = "<group>"; };
+		91FFD4491C4CA88B00E93E72 /* DataModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModal.swift; sourceTree = "<group>"; };
+		91FFD44B1C4CA88B00E93E72 /* Json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Json.json; sourceTree = "<group>"; };
+		A5B2C445A61D1644B875AEF2 /* Pods_Strawman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Strawman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F76447A45D41F98A4B46B5B3 /* Pods-Strawman.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strawman.release.xcconfig"; path = "Pods/Target Support Files/Pods-Strawman/Pods-Strawman.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91FFD4111C4CA81000E93E72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748ACCB6E1BCBA91CA2DC5F1 /* Pods_Strawman.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		73EF2EBC73B8FFDE27BAFF6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D2F3AA976FA26695CC97CB5 /* Pods-Strawman.debug.xcconfig */,
+				F76447A45D41F98A4B46B5B3 /* Pods-Strawman.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		91FFD40B1C4CA81000E93E72 = {
+			isa = PBXGroup;
+			children = (
+				91FFD4161C4CA81000E93E72 /* Strawman */,
+				91FFD4151C4CA81000E93E72 /* Products */,
+				73EF2EBC73B8FFDE27BAFF6D /* Pods */,
+				F98DD07F82DB18B761A671D0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		91FFD4151C4CA81000E93E72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91FFD4141C4CA81000E93E72 /* Strawman.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91FFD4161C4CA81000E93E72 /* Strawman */ = {
+			isa = PBXGroup;
+			children = (
+				91FFD44C1C4CA88B00E93E72 /* ViewController */,
+				91FFD4311C4CA88100E93E72 /* parse-library-1.12.0 */,
+				91FFD4331C4CA88100E93E72 /* Main.storyboard */,
+				91FFD4341C4CA88100E93E72 /* AppDelegate.swift */,
+				91FFD4291C4CA86400E93E72 /* Assets.xcassets */,
+				91FFD42A1C4CA86400E93E72 /* LaunchScreen.storyboard */,
+				91FFD42B1C4CA86400E93E72 /* Info.plist */,
+				91FFD42C1C4CA86400E93E72 /* Images.xcassets */,
+			);
+			path = Strawman;
+			sourceTree = "<group>";
+		};
+		91FFD44A1C4CA88B00E93E72 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				91FFD4471C4CA88B00E93E72 /* vagetable.swift */,
+				91FFD4481C4CA88B00E93E72 /* vageList.swift */,
+				91FFD4491C4CA88B00E93E72 /* DataModal.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		91FFD44C1C4CA88B00E93E72 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				91FFD4381C4CA88B00E93E72 /* FbLoginViewController.swift */,
+				91FFD4391C4CA88B00E93E72 /* BuyStep1ViewController.swift */,
+				91FFD43A1C4CA88B00E93E72 /* AboutMeNavController.swift */,
+				91FFD43B1C4CA88B00E93E72 /* MapViewController.swift */,
+				91FFD43C1C4CA88B00E93E72 /* tabBarController.swift */,
+				91FFD43D1C4CA88B00E93E72 /* F-BLoginViewController-old.swift */,
+				91FFD43E1C4CA88B00E93E72 /* MyAnnotation.swift */,
+				91FFD43F1C4CA88B00E93E72 /* AboutMetableViewController.swift */,
+				91FFD4401C4CA88B00E93E72 /* CookOnlieTableViewController.swift */,
+				91FFD4411C4CA88B00E93E72 /* CookTableViewCell.swift */,
+				91FFD4421C4CA88B00E93E72 /* CookTableViewCell.xib */,
+				91FFD4431C4CA88B00E93E72 /* ForCookNavController.swift */,
+				91FFD4441C4CA88B00E93E72 /* CookMovieViewController.swift */,
+				91FFD4451C4CA88B00E93E72 /* MyOrderTableViewController.swift */,
+				91FFD4461C4CA88B00E93E72 /* MyDataViewController.swift */,
+				91FFD44A1C4CA88B00E93E72 /* Data */,
+				91FFD44B1C4CA88B00E93E72 /* Json.json */,
+			);
+			name = ViewController;
+			path = ../../../Strawman/vagetableSale;
+			sourceTree = "<group>";
+		};
+		F98DD07F82DB18B761A671D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2C445A61D1644B875AEF2 /* Pods_Strawman.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91FFD4131C4CA81000E93E72 /* Strawman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91FFD4261C4CA81000E93E72 /* Build configuration list for PBXNativeTarget "Strawman" */;
+			buildPhases = (
+				B7BAE90BCF7E75C4847BD991 /* Check Pods Manifest.lock */,
+				91FFD4101C4CA81000E93E72 /* Sources */,
+				91FFD4111C4CA81000E93E72 /* Frameworks */,
+				91FFD4121C4CA81000E93E72 /* Resources */,
+				B027861031DABBD9FA794E3E /* Embed Pods Frameworks */,
+				265F8369E1BA2CA05A6FAE48 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Strawman;
+			productName = Strawman;
+			productReference = 91FFD4141C4CA81000E93E72 /* Strawman.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91FFD40C1C4CA81000E93E72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = alphacamp;
+				TargetAttributes = {
+					91FFD4131C4CA81000E93E72 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 91FFD40F1C4CA81000E93E72 /* Build configuration list for PBXProject "Strawman" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 91FFD40B1C4CA81000E93E72;
+			productRefGroup = 91FFD4151C4CA81000E93E72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91FFD4131C4CA81000E93E72 /* Strawman */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91FFD4121C4CA81000E93E72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91FFD42D1C4CA86400E93E72 /* Assets.xcassets in Resources */,
+				91FFD4571C4CA88B00E93E72 /* CookTableViewCell.xib in Resources */,
+				91FFD4301C4CA86400E93E72 /* Images.xcassets in Resources */,
+				91FFD45F1C4CA88B00E93E72 /* Json.json in Resources */,
+				91FFD42E1C4CA86400E93E72 /* LaunchScreen.storyboard in Resources */,
+				91FFD4361C4CA88100E93E72 /* Main.storyboard in Resources */,
+				91FFD42F1C4CA86400E93E72 /* Info.plist in Resources */,
+				91FFD4351C4CA88100E93E72 /* parse-library-1.12.0 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		265F8369E1BA2CA05A6FAE48 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Strawman/Pods-Strawman-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B027861031DABBD9FA794E3E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Strawman/Pods-Strawman-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7BAE90BCF7E75C4847BD991 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91FFD4101C4CA81000E93E72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91FFD45D1C4CA88B00E93E72 /* vageList.swift in Sources */,
+				91FFD45E1C4CA88B00E93E72 /* DataModal.swift in Sources */,
+				91FFD44D1C4CA88B00E93E72 /* FbLoginViewController.swift in Sources */,
+				91FFD4591C4CA88B00E93E72 /* CookMovieViewController.swift in Sources */,
+				91FFD4511C4CA88B00E93E72 /* tabBarController.swift in Sources */,
+				91FFD4541C4CA88B00E93E72 /* AboutMetableViewController.swift in Sources */,
+				91FFD4551C4CA88B00E93E72 /* CookOnlieTableViewController.swift in Sources */,
+				91FFD45C1C4CA88B00E93E72 /* vagetable.swift in Sources */,
+				91FFD4561C4CA88B00E93E72 /* CookTableViewCell.swift in Sources */,
+				91FFD4371C4CA88100E93E72 /* AppDelegate.swift in Sources */,
+				91FFD44E1C4CA88B00E93E72 /* BuyStep1ViewController.swift in Sources */,
+				91FFD4501C4CA88B00E93E72 /* MapViewController.swift in Sources */,
+				91FFD44F1C4CA88B00E93E72 /* AboutMeNavController.swift in Sources */,
+				91FFD4581C4CA88B00E93E72 /* ForCookNavController.swift in Sources */,
+				91FFD4531C4CA88B00E93E72 /* MyAnnotation.swift in Sources */,
+				91FFD45A1C4CA88B00E93E72 /* MyOrderTableViewController.swift in Sources */,
+				91FFD4521C4CA88B00E93E72 /* F-BLoginViewController-old.swift in Sources */,
+				91FFD45B1C4CA88B00E93E72 /* MyDataViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		91FFD4331C4CA88100E93E72 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91FFD4321C4CA88100E93E72 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ../../../Strawman/vagetableSale;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		91FFD4241C4CA81000E93E72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		91FFD4251C4CA81000E93E72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91FFD4271C4CA81000E93E72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D2F3AA976FA26695CC97CB5 /* Pods-Strawman.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				INFOPLIST_FILE = Strawman/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Strawman;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		91FFD4281C4CA81000E93E72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F76447A45D41F98A4B46B5B3 /* Pods-Strawman.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				INFOPLIST_FILE = Strawman/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Strawman;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91FFD40F1C4CA81000E93E72 /* Build configuration list for PBXProject "Strawman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91FFD4241C4CA81000E93E72 /* Debug */,
+				91FFD4251C4CA81000E93E72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91FFD4261C4CA81000E93E72 /* Build configuration list for PBXNativeTarget "Strawman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91FFD4271C4CA81000E93E72 /* Debug */,
+				91FFD4281C4CA81000E93E72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91FFD40C1C4CA81000E93E72 /* Project object */;
+}
