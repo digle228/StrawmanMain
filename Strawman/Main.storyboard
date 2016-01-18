@@ -288,12 +288,11 @@
                                     <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lDw-wW-wRf">
                                         <rect key="frame" x="19" y="36" width="344" height="99"/>
                                         <subviews>
-                                            <searchBar contentMode="redraw" fixedFrame="YES" barStyle="black" placeholder="請輸入地址" translatesAutoresizingMaskIntoConstraints="NO" id="Qeb-0r-VMB">
+                                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="請輸入地址" translatesAutoresizingMaskIntoConstraints="NO" id="Qeb-0r-VMB">
                                                 <rect key="frame" x="0.0" y="55" width="344" height="44"/>
                                                 <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                 <scopeButtonTitles>
-                                                    <string>Title</string>
                                                     <string>Title</string>
                                                 </scopeButtonTitles>
                                                 <connections>
