@@ -8,63 +8,58 @@
 
 /* Begin PBXBuildFile section */
 		748ACCB6E1BCBA91CA2DC5F1 /* Pods_Strawman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B2C445A61D1644B875AEF2 /* Pods_Strawman.framework */; };
+		91AD1FE91C4CB2BA004A6480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FE81C4CB2BA004A6480 /* AppDelegate.swift */; };
+		91AD1FF91C4CB3D8004A6480 /* FbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FEA1C4CB3D8004A6480 /* FbLoginViewController.swift */; };
+		91AD1FFA1C4CB3D8004A6480 /* BuyStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FEB1C4CB3D8004A6480 /* BuyStep1ViewController.swift */; };
+		91AD1FFB1C4CB3D8004A6480 /* AboutMeNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FEC1C4CB3D8004A6480 /* AboutMeNavController.swift */; };
+		91AD1FFC1C4CB3D8004A6480 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FED1C4CB3D8004A6480 /* MapViewController.swift */; };
+		91AD1FFD1C4CB3D8004A6480 /* tabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FEE1C4CB3D8004A6480 /* tabBarController.swift */; };
+		91AD1FFE1C4CB3D8004A6480 /* F-BLoginViewController-old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FEF1C4CB3D8004A6480 /* F-BLoginViewController-old.swift */; };
+		91AD1FFF1C4CB3D8004A6480 /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FF01C4CB3D8004A6480 /* MyAnnotation.swift */; };
+		91AD20001C4CB3D8004A6480 /* AboutMetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FF11C4CB3D8004A6480 /* AboutMetableViewController.swift */; };
+		91AD20011C4CB3D8004A6480 /* CookOnlieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FF21C4CB3D8004A6480 /* CookOnlieTableViewController.swift */; };
+		91AD20021C4CB3D8004A6480 /* CookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FF31C4CB3D8004A6480 /* CookTableViewCell.swift */; };
+		91AD20031C4CB3D8004A6480 /* CookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91AD1FF41C4CB3D8004A6480 /* CookTableViewCell.xib */; };
+		91AD20041C4CB3D8004A6480 /* ForCookNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FF51C4CB3D8004A6480 /* ForCookNavController.swift */; };
+		91AD20051C4CB3D8004A6480 /* CookMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FF61C4CB3D8004A6480 /* CookMovieViewController.swift */; };
+		91AD20061C4CB3D8004A6480 /* MyOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FF71C4CB3D8004A6480 /* MyOrderTableViewController.swift */; };
+		91AD20071C4CB3D8004A6480 /* MyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FF81C4CB3D8004A6480 /* MyDataViewController.swift */; };
+		91AD200B1C4CB416004A6480 /* vagetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD20081C4CB416004A6480 /* vagetable.swift */; };
+		91AD200C1C4CB416004A6480 /* vageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD20091C4CB416004A6480 /* vageList.swift */; };
+		91AD200F1C4CB43F004A6480 /* DataModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD200E1C4CB43F004A6480 /* DataModal.swift */; };
+		91AD20111C4CB4A5004A6480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AD20101C4CB4A5004A6480 /* Main.storyboard */; };
 		91FFD42D1C4CA86400E93E72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD4291C4CA86400E93E72 /* Assets.xcassets */; };
 		91FFD42E1C4CA86400E93E72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD42A1C4CA86400E93E72 /* LaunchScreen.storyboard */; };
-		91FFD42F1C4CA86400E93E72 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD42B1C4CA86400E93E72 /* Info.plist */; };
 		91FFD4301C4CA86400E93E72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD42C1C4CA86400E93E72 /* Images.xcassets */; };
-		91FFD4351C4CA88100E93E72 /* parse-library-1.12.0 in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD4311C4CA88100E93E72 /* parse-library-1.12.0 */; };
-		91FFD4361C4CA88100E93E72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD4331C4CA88100E93E72 /* Main.storyboard */; };
-		91FFD4371C4CA88100E93E72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4341C4CA88100E93E72 /* AppDelegate.swift */; };
-		91FFD44D1C4CA88B00E93E72 /* FbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4381C4CA88B00E93E72 /* FbLoginViewController.swift */; };
-		91FFD44E1C4CA88B00E93E72 /* BuyStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4391C4CA88B00E93E72 /* BuyStep1ViewController.swift */; };
-		91FFD44F1C4CA88B00E93E72 /* AboutMeNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD43A1C4CA88B00E93E72 /* AboutMeNavController.swift */; };
-		91FFD4501C4CA88B00E93E72 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD43B1C4CA88B00E93E72 /* MapViewController.swift */; };
-		91FFD4511C4CA88B00E93E72 /* tabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD43C1C4CA88B00E93E72 /* tabBarController.swift */; };
-		91FFD4521C4CA88B00E93E72 /* F-BLoginViewController-old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD43D1C4CA88B00E93E72 /* F-BLoginViewController-old.swift */; };
-		91FFD4531C4CA88B00E93E72 /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD43E1C4CA88B00E93E72 /* MyAnnotation.swift */; };
-		91FFD4541C4CA88B00E93E72 /* AboutMetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD43F1C4CA88B00E93E72 /* AboutMetableViewController.swift */; };
-		91FFD4551C4CA88B00E93E72 /* CookOnlieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4401C4CA88B00E93E72 /* CookOnlieTableViewController.swift */; };
-		91FFD4561C4CA88B00E93E72 /* CookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4411C4CA88B00E93E72 /* CookTableViewCell.swift */; };
-		91FFD4571C4CA88B00E93E72 /* CookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD4421C4CA88B00E93E72 /* CookTableViewCell.xib */; };
-		91FFD4581C4CA88B00E93E72 /* ForCookNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4431C4CA88B00E93E72 /* ForCookNavController.swift */; };
-		91FFD4591C4CA88B00E93E72 /* CookMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4441C4CA88B00E93E72 /* CookMovieViewController.swift */; };
-		91FFD45A1C4CA88B00E93E72 /* MyOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4451C4CA88B00E93E72 /* MyOrderTableViewController.swift */; };
-		91FFD45B1C4CA88B00E93E72 /* MyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4461C4CA88B00E93E72 /* MyDataViewController.swift */; };
-		91FFD45C1C4CA88B00E93E72 /* vagetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4471C4CA88B00E93E72 /* vagetable.swift */; };
-		91FFD45D1C4CA88B00E93E72 /* vageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4481C4CA88B00E93E72 /* vageList.swift */; };
-		91FFD45E1C4CA88B00E93E72 /* DataModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFD4491C4CA88B00E93E72 /* DataModal.swift */; };
-		91FFD45F1C4CA88B00E93E72 /* Json.json in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD44B1C4CA88B00E93E72 /* Json.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D2F3AA976FA26695CC97CB5 /* Pods-Strawman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strawman.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Strawman/Pods-Strawman.debug.xcconfig"; sourceTree = "<group>"; };
+		91AD1FE81C4CB2BA004A6480 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		91AD1FEA1C4CB3D8004A6480 /* FbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FbLoginViewController.swift; path = "../../xcode-swift/StrawmanOldFile/Strawman/vagetableSale/FbLoginViewController.swift"; sourceTree = "<group>"; };
+		91AD1FEB1C4CB3D8004A6480 /* BuyStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuyStep1ViewController.swift; path = "../../xcode-swift/StrawmanOldFile/Strawman/BuyStep1ViewController.swift"; sourceTree = "<group>"; };
+		91AD1FEC1C4CB3D8004A6480 /* AboutMeNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutMeNavController.swift; path = "../../xcode-swift/StrawmanOldFile/Strawman/AboutMeNavController.swift"; sourceTree = "<group>"; };
+		91AD1FED1C4CB3D8004A6480 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = "../../xcode-swift/StrawmanOldFile/Strawman/vagetableSale/MapViewController.swift"; sourceTree = "<group>"; };
+		91AD1FEE1C4CB3D8004A6480 /* tabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tabBarController.swift; path = "../../xcode-swift/StrawmanOldFile/Strawman/tabBarController.swift"; sourceTree = "<group>"; };
+		91AD1FEF1C4CB3D8004A6480 /* F-BLoginViewController-old.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "F-BLoginViewController-old.swift"; path = "../../xcode-swift/StrawmanOldFile/Strawman/vagetableSale/F-BLoginViewController-old.swift"; sourceTree = "<group>"; };
+		91AD1FF01C4CB3D8004A6480 /* MyAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyAnnotation.swift; path = "../../xcode-swift/StrawmanOldFile/Strawman/vagetableSale/MyAnnotation.swift"; sourceTree = "<group>"; };
+		91AD1FF11C4CB3D8004A6480 /* AboutMetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutMetableViewController.swift; path = "../../xcode-swift/StrawmanOldFile/Strawman/AboutMetableViewController.swift"; sourceTree = "<group>"; };
+		91AD1FF21C4CB3D8004A6480 /* CookOnlieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookOnlieTableViewController.swift; path = "../../xcode-swift/StrawmanOldFile/Strawman/CookOnlieTableViewController.swift"; sourceTree = "<group>"; };
+		91AD1FF31C4CB3D8004A6480 /* CookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookTableViewCell.swift; path = "../../xcode-swift/StrawmanOldFile/Strawman/CookTableViewCell.swift"; sourceTree = "<group>"; };
+		91AD1FF41C4CB3D8004A6480 /* CookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CookTableViewCell.xib; path = "../../xcode-swift/StrawmanOldFile/Strawman/CookTableViewCell.xib"; sourceTree = "<group>"; };
+		91AD1FF51C4CB3D8004A6480 /* ForCookNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForCookNavController.swift; path = "../../xcode-swift/StrawmanOldFile/Strawman/ForCookNavController.swift"; sourceTree = "<group>"; };
+		91AD1FF61C4CB3D8004A6480 /* CookMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookMovieViewController.swift; path = "../../xcode-swift/StrawmanOldFile/Strawman/CookMovieViewController.swift"; sourceTree = "<group>"; };
+		91AD1FF71C4CB3D8004A6480 /* MyOrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyOrderTableViewController.swift; path = "../../xcode-swift/StrawmanOldFile/Strawman/vagetableSale/MyOrderTableViewController.swift"; sourceTree = "<group>"; };
+		91AD1FF81C4CB3D8004A6480 /* MyDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyDataViewController.swift; path = "../../xcode-swift/StrawmanOldFile/Strawman/vagetableSale/MyDataViewController.swift"; sourceTree = "<group>"; };
+		91AD20081C4CB416004A6480 /* vagetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vagetable.swift; sourceTree = SOURCE_ROOT; };
+		91AD20091C4CB416004A6480 /* vageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vageList.swift; sourceTree = SOURCE_ROOT; };
+		91AD200E1C4CB43F004A6480 /* DataModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModal.swift; sourceTree = SOURCE_ROOT; };
+		91AD20101C4CB4A5004A6480 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		91FFD4141C4CA81000E93E72 /* Strawman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strawman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FFD4291C4CA86400E93E72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91FFD42A1C4CA86400E93E72 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91FFD42B1C4CA86400E93E72 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91FFD42C1C4CA86400E93E72 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		91FFD4311C4CA88100E93E72 /* parse-library-1.12.0 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "parse-library-1.12.0"; path = "../../../Strawman/vagetableSale/parse-library-1.12.0"; sourceTree = "<group>"; };
-		91FFD4321C4CA88100E93E72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		91FFD4341C4CA88100E93E72 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../Strawman/vagetableSale/AppDelegate.swift; sourceTree = "<group>"; };
-		91FFD4381C4CA88B00E93E72 /* FbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbLoginViewController.swift; sourceTree = "<group>"; };
-		91FFD4391C4CA88B00E93E72 /* BuyStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuyStep1ViewController.swift; path = ../BuyStep1ViewController.swift; sourceTree = "<group>"; };
-		91FFD43A1C4CA88B00E93E72 /* AboutMeNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutMeNavController.swift; path = ../AboutMeNavController.swift; sourceTree = "<group>"; };
-		91FFD43B1C4CA88B00E93E72 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		91FFD43C1C4CA88B00E93E72 /* tabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tabBarController.swift; path = ../tabBarController.swift; sourceTree = "<group>"; };
-		91FFD43D1C4CA88B00E93E72 /* F-BLoginViewController-old.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "F-BLoginViewController-old.swift"; sourceTree = "<group>"; };
-		91FFD43E1C4CA88B00E93E72 /* MyAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
-		91FFD43F1C4CA88B00E93E72 /* AboutMetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutMetableViewController.swift; path = ../AboutMetableViewController.swift; sourceTree = "<group>"; };
-		91FFD4401C4CA88B00E93E72 /* CookOnlieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookOnlieTableViewController.swift; path = ../CookOnlieTableViewController.swift; sourceTree = "<group>"; };
-		91FFD4411C4CA88B00E93E72 /* CookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookTableViewCell.swift; path = ../CookTableViewCell.swift; sourceTree = "<group>"; };
-		91FFD4421C4CA88B00E93E72 /* CookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CookTableViewCell.xib; path = ../CookTableViewCell.xib; sourceTree = "<group>"; };
-		91FFD4431C4CA88B00E93E72 /* ForCookNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForCookNavController.swift; path = ../ForCookNavController.swift; sourceTree = "<group>"; };
-		91FFD4441C4CA88B00E93E72 /* CookMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookMovieViewController.swift; path = ../CookMovieViewController.swift; sourceTree = "<group>"; };
-		91FFD4451C4CA88B00E93E72 /* MyOrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrderTableViewController.swift; sourceTree = "<group>"; };
-		91FFD4461C4CA88B00E93E72 /* MyDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDataViewController.swift; sourceTree = "<group>"; };
-		91FFD4471C4CA88B00E93E72 /* vagetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vagetable.swift; sourceTree = "<group>"; };
-		91FFD4481C4CA88B00E93E72 /* vageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vageList.swift; path = ../vageList.swift; sourceTree = "<group>"; };
-		91FFD4491C4CA88B00E93E72 /* DataModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModal.swift; sourceTree = "<group>"; };
-		91FFD44B1C4CA88B00E93E72 /* Json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Json.json; sourceTree = "<group>"; };
 		A5B2C445A61D1644B875AEF2 /* Pods_Strawman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Strawman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76447A45D41F98A4B46B5B3 /* Pods-Strawman.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strawman.release.xcconfig"; path = "Pods/Target Support Files/Pods-Strawman/Pods-Strawman.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,10 +106,9 @@
 		91FFD4161C4CA81000E93E72 /* Strawman */ = {
 			isa = PBXGroup;
 			children = (
+				91AD20101C4CB4A5004A6480 /* Main.storyboard */,
 				91FFD44C1C4CA88B00E93E72 /* ViewController */,
-				91FFD4311C4CA88100E93E72 /* parse-library-1.12.0 */,
-				91FFD4331C4CA88100E93E72 /* Main.storyboard */,
-				91FFD4341C4CA88100E93E72 /* AppDelegate.swift */,
+				91AD1FE81C4CB2BA004A6480 /* AppDelegate.swift */,
 				91FFD4291C4CA86400E93E72 /* Assets.xcassets */,
 				91FFD42A1C4CA86400E93E72 /* LaunchScreen.storyboard */,
 				91FFD42B1C4CA86400E93E72 /* Info.plist */,
@@ -126,9 +120,9 @@
 		91FFD44A1C4CA88B00E93E72 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				91FFD4471C4CA88B00E93E72 /* vagetable.swift */,
-				91FFD4481C4CA88B00E93E72 /* vageList.swift */,
-				91FFD4491C4CA88B00E93E72 /* DataModal.swift */,
+				91AD20081C4CB416004A6480 /* vagetable.swift */,
+				91AD200E1C4CB43F004A6480 /* DataModal.swift */,
+				91AD20091C4CB416004A6480 /* vageList.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -136,23 +130,22 @@
 		91FFD44C1C4CA88B00E93E72 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				91FFD4381C4CA88B00E93E72 /* FbLoginViewController.swift */,
-				91FFD4391C4CA88B00E93E72 /* BuyStep1ViewController.swift */,
-				91FFD43A1C4CA88B00E93E72 /* AboutMeNavController.swift */,
-				91FFD43B1C4CA88B00E93E72 /* MapViewController.swift */,
-				91FFD43C1C4CA88B00E93E72 /* tabBarController.swift */,
-				91FFD43D1C4CA88B00E93E72 /* F-BLoginViewController-old.swift */,
-				91FFD43E1C4CA88B00E93E72 /* MyAnnotation.swift */,
-				91FFD43F1C4CA88B00E93E72 /* AboutMetableViewController.swift */,
-				91FFD4401C4CA88B00E93E72 /* CookOnlieTableViewController.swift */,
-				91FFD4411C4CA88B00E93E72 /* CookTableViewCell.swift */,
-				91FFD4421C4CA88B00E93E72 /* CookTableViewCell.xib */,
-				91FFD4431C4CA88B00E93E72 /* ForCookNavController.swift */,
-				91FFD4441C4CA88B00E93E72 /* CookMovieViewController.swift */,
-				91FFD4451C4CA88B00E93E72 /* MyOrderTableViewController.swift */,
-				91FFD4461C4CA88B00E93E72 /* MyDataViewController.swift */,
+				91AD1FEA1C4CB3D8004A6480 /* FbLoginViewController.swift */,
+				91AD1FEB1C4CB3D8004A6480 /* BuyStep1ViewController.swift */,
+				91AD1FEC1C4CB3D8004A6480 /* AboutMeNavController.swift */,
+				91AD1FED1C4CB3D8004A6480 /* MapViewController.swift */,
+				91AD1FEE1C4CB3D8004A6480 /* tabBarController.swift */,
+				91AD1FEF1C4CB3D8004A6480 /* F-BLoginViewController-old.swift */,
+				91AD1FF01C4CB3D8004A6480 /* MyAnnotation.swift */,
+				91AD1FF11C4CB3D8004A6480 /* AboutMetableViewController.swift */,
+				91AD1FF21C4CB3D8004A6480 /* CookOnlieTableViewController.swift */,
+				91AD1FF31C4CB3D8004A6480 /* CookTableViewCell.swift */,
+				91AD1FF41C4CB3D8004A6480 /* CookTableViewCell.xib */,
+				91AD1FF51C4CB3D8004A6480 /* ForCookNavController.swift */,
+				91AD1FF61C4CB3D8004A6480 /* CookMovieViewController.swift */,
+				91AD1FF71C4CB3D8004A6480 /* MyOrderTableViewController.swift */,
+				91AD1FF81C4CB3D8004A6480 /* MyDataViewController.swift */,
 				91FFD44A1C4CA88B00E93E72 /* Data */,
-				91FFD44B1C4CA88B00E93E72 /* Json.json */,
 			);
 			name = ViewController;
 			path = ../../../Strawman/vagetableSale;
@@ -201,6 +194,12 @@
 				TargetAttributes = {
 					91FFD4131C4CA81000E93E72 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 8H7X36TF25;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -228,13 +227,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				91FFD42D1C4CA86400E93E72 /* Assets.xcassets in Resources */,
-				91FFD4571C4CA88B00E93E72 /* CookTableViewCell.xib in Resources */,
+				91AD20031C4CB3D8004A6480 /* CookTableViewCell.xib in Resources */,
 				91FFD4301C4CA86400E93E72 /* Images.xcassets in Resources */,
-				91FFD45F1C4CA88B00E93E72 /* Json.json in Resources */,
+				91AD20111C4CB4A5004A6480 /* Main.storyboard in Resources */,
 				91FFD42E1C4CA86400E93E72 /* LaunchScreen.storyboard in Resources */,
-				91FFD4361C4CA88100E93E72 /* Main.storyboard in Resources */,
-				91FFD42F1C4CA86400E93E72 /* Info.plist in Resources */,
-				91FFD4351C4CA88100E93E72 /* parse-library-1.12.0 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,40 +289,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91FFD45D1C4CA88B00E93E72 /* vageList.swift in Sources */,
-				91FFD45E1C4CA88B00E93E72 /* DataModal.swift in Sources */,
-				91FFD44D1C4CA88B00E93E72 /* FbLoginViewController.swift in Sources */,
-				91FFD4591C4CA88B00E93E72 /* CookMovieViewController.swift in Sources */,
-				91FFD4511C4CA88B00E93E72 /* tabBarController.swift in Sources */,
-				91FFD4541C4CA88B00E93E72 /* AboutMetableViewController.swift in Sources */,
-				91FFD4551C4CA88B00E93E72 /* CookOnlieTableViewController.swift in Sources */,
-				91FFD45C1C4CA88B00E93E72 /* vagetable.swift in Sources */,
-				91FFD4561C4CA88B00E93E72 /* CookTableViewCell.swift in Sources */,
-				91FFD4371C4CA88100E93E72 /* AppDelegate.swift in Sources */,
-				91FFD44E1C4CA88B00E93E72 /* BuyStep1ViewController.swift in Sources */,
-				91FFD4501C4CA88B00E93E72 /* MapViewController.swift in Sources */,
-				91FFD44F1C4CA88B00E93E72 /* AboutMeNavController.swift in Sources */,
-				91FFD4581C4CA88B00E93E72 /* ForCookNavController.swift in Sources */,
-				91FFD4531C4CA88B00E93E72 /* MyAnnotation.swift in Sources */,
-				91FFD45A1C4CA88B00E93E72 /* MyOrderTableViewController.swift in Sources */,
-				91FFD4521C4CA88B00E93E72 /* F-BLoginViewController-old.swift in Sources */,
-				91FFD45B1C4CA88B00E93E72 /* MyDataViewController.swift in Sources */,
+				91AD1FFB1C4CB3D8004A6480 /* AboutMeNavController.swift in Sources */,
+				91AD200F1C4CB43F004A6480 /* DataModal.swift in Sources */,
+				91AD200B1C4CB416004A6480 /* vagetable.swift in Sources */,
+				91AD1FFF1C4CB3D8004A6480 /* MyAnnotation.swift in Sources */,
+				91AD20001C4CB3D8004A6480 /* AboutMetableViewController.swift in Sources */,
+				91AD20051C4CB3D8004A6480 /* CookMovieViewController.swift in Sources */,
+				91AD20041C4CB3D8004A6480 /* ForCookNavController.swift in Sources */,
+				91AD20011C4CB3D8004A6480 /* CookOnlieTableViewController.swift in Sources */,
+				91AD1FF91C4CB3D8004A6480 /* FbLoginViewController.swift in Sources */,
+				91AD1FFE1C4CB3D8004A6480 /* F-BLoginViewController-old.swift in Sources */,
+				91AD1FE91C4CB2BA004A6480 /* AppDelegate.swift in Sources */,
+				91AD20021C4CB3D8004A6480 /* CookTableViewCell.swift in Sources */,
+				91AD1FFA1C4CB3D8004A6480 /* BuyStep1ViewController.swift in Sources */,
+				91AD20071C4CB3D8004A6480 /* MyDataViewController.swift in Sources */,
+				91AD200C1C4CB416004A6480 /* vageList.swift in Sources */,
+				91AD1FFD1C4CB3D8004A6480 /* tabBarController.swift in Sources */,
+				91AD1FFC1C4CB3D8004A6480 /* MapViewController.swift in Sources */,
+				91AD20061C4CB3D8004A6480 /* MyOrderTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		91FFD4331C4CA88100E93E72 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				91FFD4321C4CA88100E93E72 /* Base */,
-			);
-			name = Main.storyboard;
-			path = ../../../Strawman/vagetableSale;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		91FFD4241C4CA81000E93E72 /* Debug */ = {
@@ -416,9 +400,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Strawman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Strawman;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alphacamp.Strawman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -429,9 +414,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Strawman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Strawman;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alphacamp.Strawman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -446,7 +432,7 @@
 				91FFD4251C4CA81000E93E72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		91FFD4261C4CA81000E93E72 /* Build configuration list for PBXNativeTarget "Strawman" */ = {
 			isa = XCConfigurationList;
@@ -455,7 +441,7 @@
 				91FFD4281C4CA81000E93E72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
