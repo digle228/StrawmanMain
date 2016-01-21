@@ -8,26 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		748ACCB6E1BCBA91CA2DC5F1 /* Pods_Strawman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B2C445A61D1644B875AEF2 /* Pods_Strawman.framework */; };
+		917CEB5C1C50B76F0092AE88 /* FbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB4D1C50B76F0092AE88 /* FbLoginViewController.swift */; };
+		917CEB5D1C50B76F0092AE88 /* BuyStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB4E1C50B76F0092AE88 /* BuyStep1ViewController.swift */; };
+		917CEB5E1C50B76F0092AE88 /* AboutMeNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB4F1C50B76F0092AE88 /* AboutMeNavController.swift */; };
+		917CEB5F1C50B76F0092AE88 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB501C50B76F0092AE88 /* MapViewController.swift */; };
+		917CEB601C50B76F0092AE88 /* tabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB511C50B76F0092AE88 /* tabBarController.swift */; };
+		917CEB611C50B76F0092AE88 /* F-BLoginViewController-old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB521C50B76F0092AE88 /* F-BLoginViewController-old.swift */; };
+		917CEB621C50B76F0092AE88 /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB531C50B76F0092AE88 /* MyAnnotation.swift */; };
+		917CEB631C50B76F0092AE88 /* AboutMetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB541C50B76F0092AE88 /* AboutMetableViewController.swift */; };
+		917CEB641C50B76F0092AE88 /* CookOnlieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB551C50B76F0092AE88 /* CookOnlieTableViewController.swift */; };
+		917CEB651C50B76F0092AE88 /* CookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB561C50B76F0092AE88 /* CookTableViewCell.swift */; };
+		917CEB661C50B76F0092AE88 /* CookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 917CEB571C50B76F0092AE88 /* CookTableViewCell.xib */; };
+		917CEB671C50B76F0092AE88 /* ForCookNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB581C50B76F0092AE88 /* ForCookNavController.swift */; };
+		917CEB681C50B76F0092AE88 /* CookMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB591C50B76F0092AE88 /* CookMovieViewController.swift */; };
+		917CEB691C50B76F0092AE88 /* MyOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB5A1C50B76F0092AE88 /* MyOrderTableViewController.swift */; };
+		917CEB6A1C50B76F0092AE88 /* MyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB5B1C50B76F0092AE88 /* MyDataViewController.swift */; };
 		91AD1FE91C4CB2BA004A6480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FE81C4CB2BA004A6480 /* AppDelegate.swift */; };
-		91AD200B1C4CB416004A6480 /* vagetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD20081C4CB416004A6480 /* vagetable.swift */; };
-		91AD200C1C4CB416004A6480 /* vageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD20091C4CB416004A6480 /* vageList.swift */; };
-		91AD200F1C4CB43F004A6480 /* DataModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD200E1C4CB43F004A6480 /* DataModal.swift */; };
 		91AD20111C4CB4A5004A6480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AD20101C4CB4A5004A6480 /* Main.storyboard */; };
-		91E8E57F1C4D2954002E587A /* FbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8E5701C4D2954002E587A /* FbLoginViewController.swift */; };
-		91E8E5801C4D2954002E587A /* BuyStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8E5711C4D2954002E587A /* BuyStep1ViewController.swift */; };
-		91E8E5811C4D2954002E587A /* AboutMeNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8E5721C4D2954002E587A /* AboutMeNavController.swift */; };
-		91E8E5821C4D2954002E587A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8E5731C4D2954002E587A /* MapViewController.swift */; };
-		91E8E5831C4D2954002E587A /* tabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8E5741C4D2954002E587A /* tabBarController.swift */; };
-		91E8E5841C4D2954002E587A /* F-BLoginViewController-old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8E5751C4D2954002E587A /* F-BLoginViewController-old.swift */; };
-		91E8E5851C4D2954002E587A /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8E5761C4D2954002E587A /* MyAnnotation.swift */; };
-		91E8E5861C4D2954002E587A /* AboutMetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8E5771C4D2954002E587A /* AboutMetableViewController.swift */; };
-		91E8E5871C4D2954002E587A /* CookOnlieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8E5781C4D2954002E587A /* CookOnlieTableViewController.swift */; };
-		91E8E5881C4D2954002E587A /* CookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8E5791C4D2954002E587A /* CookTableViewCell.swift */; };
-		91E8E5891C4D2954002E587A /* CookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E8E57A1C4D2954002E587A /* CookTableViewCell.xib */; };
-		91E8E58A1C4D2954002E587A /* ForCookNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8E57B1C4D2954002E587A /* ForCookNavController.swift */; };
-		91E8E58B1C4D2954002E587A /* CookMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8E57C1C4D2954002E587A /* CookMovieViewController.swift */; };
-		91E8E58C1C4D2954002E587A /* MyOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8E57D1C4D2954002E587A /* MyOrderTableViewController.swift */; };
-		91E8E58D1C4D2954002E587A /* MyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E8E57E1C4D2954002E587A /* MyDataViewController.swift */; };
 		91E8E58F1C4D29D5002E587A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E8E58E1C4D29D5002E587A /* Images.xcassets */; };
 		91FFD42D1C4CA86400E93E72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD4291C4CA86400E93E72 /* Assets.xcassets */; };
 		91FFD42E1C4CA86400E93E72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD42A1C4CA86400E93E72 /* LaunchScreen.storyboard */; };
@@ -35,27 +32,24 @@
 
 /* Begin PBXFileReference section */
 		0D2F3AA976FA26695CC97CB5 /* Pods-Strawman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strawman.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Strawman/Pods-Strawman.debug.xcconfig"; sourceTree = "<group>"; };
+		917CEB4D1C50B76F0092AE88 /* FbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbLoginViewController.swift; sourceTree = "<group>"; };
+		917CEB4E1C50B76F0092AE88 /* BuyStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyStep1ViewController.swift; sourceTree = "<group>"; };
+		917CEB4F1C50B76F0092AE88 /* AboutMeNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeNavController.swift; sourceTree = "<group>"; };
+		917CEB501C50B76F0092AE88 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		917CEB511C50B76F0092AE88 /* tabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabBarController.swift; sourceTree = "<group>"; };
+		917CEB521C50B76F0092AE88 /* F-BLoginViewController-old.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "F-BLoginViewController-old.swift"; sourceTree = "<group>"; };
+		917CEB531C50B76F0092AE88 /* MyAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
+		917CEB541C50B76F0092AE88 /* AboutMetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMetableViewController.swift; sourceTree = "<group>"; };
+		917CEB551C50B76F0092AE88 /* CookOnlieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookOnlieTableViewController.swift; sourceTree = "<group>"; };
+		917CEB561C50B76F0092AE88 /* CookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookTableViewCell.swift; sourceTree = "<group>"; };
+		917CEB571C50B76F0092AE88 /* CookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookTableViewCell.xib; sourceTree = "<group>"; };
+		917CEB581C50B76F0092AE88 /* ForCookNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForCookNavController.swift; sourceTree = "<group>"; };
+		917CEB591C50B76F0092AE88 /* CookMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookMovieViewController.swift; sourceTree = "<group>"; };
+		917CEB5A1C50B76F0092AE88 /* MyOrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrderTableViewController.swift; sourceTree = "<group>"; };
+		917CEB5B1C50B76F0092AE88 /* MyDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDataViewController.swift; sourceTree = "<group>"; };
 		91AD1FE81C4CB2BA004A6480 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		91AD20081C4CB416004A6480 /* vagetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vagetable.swift; sourceTree = SOURCE_ROOT; };
-		91AD20091C4CB416004A6480 /* vageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vageList.swift; sourceTree = SOURCE_ROOT; };
-		91AD200E1C4CB43F004A6480 /* DataModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModal.swift; sourceTree = SOURCE_ROOT; };
 		91AD20101C4CB4A5004A6480 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		91E8E5341C4D123C002E587A /* Strawman-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Strawman-Bridging-Header.h"; sourceTree = "<group>"; };
-		91E8E5701C4D2954002E587A /* FbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FbLoginViewController.swift; path = "../../xcode-swift/oldStrawmanOldFile/Strawman/vagetableSale/FbLoginViewController.swift"; sourceTree = "<group>"; };
-		91E8E5711C4D2954002E587A /* BuyStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuyStep1ViewController.swift; path = "../../xcode-swift/oldStrawmanOldFile/Strawman/BuyStep1ViewController.swift"; sourceTree = "<group>"; };
-		91E8E5721C4D2954002E587A /* AboutMeNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutMeNavController.swift; path = "../../xcode-swift/oldStrawmanOldFile/Strawman/AboutMeNavController.swift"; sourceTree = "<group>"; };
-		91E8E5731C4D2954002E587A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = "../../xcode-swift/oldStrawmanOldFile/Strawman/vagetableSale/MapViewController.swift"; sourceTree = "<group>"; };
-		91E8E5741C4D2954002E587A /* tabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tabBarController.swift; path = "../../xcode-swift/oldStrawmanOldFile/Strawman/tabBarController.swift"; sourceTree = "<group>"; };
-		91E8E5751C4D2954002E587A /* F-BLoginViewController-old.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "F-BLoginViewController-old.swift"; path = "../../xcode-swift/oldStrawmanOldFile/Strawman/vagetableSale/F-BLoginViewController-old.swift"; sourceTree = "<group>"; };
-		91E8E5761C4D2954002E587A /* MyAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyAnnotation.swift; path = "../../xcode-swift/oldStrawmanOldFile/Strawman/vagetableSale/MyAnnotation.swift"; sourceTree = "<group>"; };
-		91E8E5771C4D2954002E587A /* AboutMetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutMetableViewController.swift; path = "../../xcode-swift/oldStrawmanOldFile/Strawman/AboutMetableViewController.swift"; sourceTree = "<group>"; };
-		91E8E5781C4D2954002E587A /* CookOnlieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookOnlieTableViewController.swift; path = "../../xcode-swift/oldStrawmanOldFile/Strawman/CookOnlieTableViewController.swift"; sourceTree = "<group>"; };
-		91E8E5791C4D2954002E587A /* CookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookTableViewCell.swift; path = "../../xcode-swift/oldStrawmanOldFile/Strawman/CookTableViewCell.swift"; sourceTree = "<group>"; };
-		91E8E57A1C4D2954002E587A /* CookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CookTableViewCell.xib; path = "../../xcode-swift/oldStrawmanOldFile/Strawman/CookTableViewCell.xib"; sourceTree = "<group>"; };
-		91E8E57B1C4D2954002E587A /* ForCookNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForCookNavController.swift; path = "../../xcode-swift/oldStrawmanOldFile/Strawman/ForCookNavController.swift"; sourceTree = "<group>"; };
-		91E8E57C1C4D2954002E587A /* CookMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookMovieViewController.swift; path = "../../xcode-swift/oldStrawmanOldFile/Strawman/CookMovieViewController.swift"; sourceTree = "<group>"; };
-		91E8E57D1C4D2954002E587A /* MyOrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyOrderTableViewController.swift; path = "../../xcode-swift/oldStrawmanOldFile/Strawman/vagetableSale/MyOrderTableViewController.swift"; sourceTree = "<group>"; };
-		91E8E57E1C4D2954002E587A /* MyDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyDataViewController.swift; path = "../../xcode-swift/oldStrawmanOldFile/Strawman/vagetableSale/MyDataViewController.swift"; sourceTree = "<group>"; };
 		91E8E58E1C4D29D5002E587A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		91FFD4141C4CA81000E93E72 /* Strawman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strawman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FFD4291C4CA86400E93E72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +80,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		917CEB4C1C50B72A0092AE88 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				917CEB4D1C50B76F0092AE88 /* FbLoginViewController.swift */,
+				917CEB4E1C50B76F0092AE88 /* BuyStep1ViewController.swift */,
+				917CEB4F1C50B76F0092AE88 /* AboutMeNavController.swift */,
+				917CEB501C50B76F0092AE88 /* MapViewController.swift */,
+				917CEB511C50B76F0092AE88 /* tabBarController.swift */,
+				917CEB521C50B76F0092AE88 /* F-BLoginViewController-old.swift */,
+				917CEB531C50B76F0092AE88 /* MyAnnotation.swift */,
+				917CEB541C50B76F0092AE88 /* AboutMetableViewController.swift */,
+				917CEB551C50B76F0092AE88 /* CookOnlieTableViewController.swift */,
+				917CEB561C50B76F0092AE88 /* CookTableViewCell.swift */,
+				917CEB571C50B76F0092AE88 /* CookTableViewCell.xib */,
+				917CEB581C50B76F0092AE88 /* ForCookNavController.swift */,
+				917CEB591C50B76F0092AE88 /* CookMovieViewController.swift */,
+				917CEB5A1C50B76F0092AE88 /* MyOrderTableViewController.swift */,
+				917CEB5B1C50B76F0092AE88 /* MyDataViewController.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		91FFD40B1C4CA81000E93E72 = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +123,7 @@
 		91FFD4161C4CA81000E93E72 /* Strawman */ = {
 			isa = PBXGroup;
 			children = (
-				91FFD44C1C4CA88B00E93E72 /* ViewController */,
+				917CEB4C1C50B72A0092AE88 /* view */,
 				91AD20101C4CB4A5004A6480 /* Main.storyboard */,
 				91AD1FE81C4CB2BA004A6480 /* AppDelegate.swift */,
 				91E8E58E1C4D29D5002E587A /* Images.xcassets */,
@@ -117,40 +133,6 @@
 				91FFD42B1C4CA86400E93E72 /* Info.plist */,
 			);
 			path = Strawman;
-			sourceTree = "<group>";
-		};
-		91FFD44A1C4CA88B00E93E72 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				91AD20081C4CB416004A6480 /* vagetable.swift */,
-				91AD200E1C4CB43F004A6480 /* DataModal.swift */,
-				91AD20091C4CB416004A6480 /* vageList.swift */,
-			);
-			name = Data;
-			sourceTree = "<group>";
-		};
-		91FFD44C1C4CA88B00E93E72 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				91E8E5701C4D2954002E587A /* FbLoginViewController.swift */,
-				91E8E5711C4D2954002E587A /* BuyStep1ViewController.swift */,
-				91E8E5721C4D2954002E587A /* AboutMeNavController.swift */,
-				91E8E5731C4D2954002E587A /* MapViewController.swift */,
-				91E8E5741C4D2954002E587A /* tabBarController.swift */,
-				91E8E5751C4D2954002E587A /* F-BLoginViewController-old.swift */,
-				91E8E5761C4D2954002E587A /* MyAnnotation.swift */,
-				91E8E5771C4D2954002E587A /* AboutMetableViewController.swift */,
-				91E8E5781C4D2954002E587A /* CookOnlieTableViewController.swift */,
-				91E8E5791C4D2954002E587A /* CookTableViewCell.swift */,
-				91E8E57A1C4D2954002E587A /* CookTableViewCell.xib */,
-				91E8E57B1C4D2954002E587A /* ForCookNavController.swift */,
-				91E8E57C1C4D2954002E587A /* CookMovieViewController.swift */,
-				91E8E57D1C4D2954002E587A /* MyOrderTableViewController.swift */,
-				91E8E57E1C4D2954002E587A /* MyDataViewController.swift */,
-				91FFD44A1C4CA88B00E93E72 /* Data */,
-			);
-			name = ViewController;
-			path = ../../../Strawman/vagetableSale;
 			sourceTree = "<group>";
 		};
 		F98DD07F82DB18B761A671D0 /* Frameworks */ = {
@@ -231,7 +213,7 @@
 				91FFD42D1C4CA86400E93E72 /* Assets.xcassets in Resources */,
 				91E8E58F1C4D29D5002E587A /* Images.xcassets in Resources */,
 				91AD20111C4CB4A5004A6480 /* Main.storyboard in Resources */,
-				91E8E5891C4D2954002E587A /* CookTableViewCell.xib in Resources */,
+				917CEB661C50B76F0092AE88 /* CookTableViewCell.xib in Resources */,
 				91FFD42E1C4CA86400E93E72 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,24 +273,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91E8E5811C4D2954002E587A /* AboutMeNavController.swift in Sources */,
-				91E8E5851C4D2954002E587A /* MyAnnotation.swift in Sources */,
-				91E8E5861C4D2954002E587A /* AboutMetableViewController.swift in Sources */,
-				91E8E58B1C4D2954002E587A /* CookMovieViewController.swift in Sources */,
-				91E8E58A1C4D2954002E587A /* ForCookNavController.swift in Sources */,
-				91E8E5871C4D2954002E587A /* CookOnlieTableViewController.swift in Sources */,
-				91E8E57F1C4D2954002E587A /* FbLoginViewController.swift in Sources */,
-				91AD200F1C4CB43F004A6480 /* DataModal.swift in Sources */,
-				91AD200B1C4CB416004A6480 /* vagetable.swift in Sources */,
-				91E8E5841C4D2954002E587A /* F-BLoginViewController-old.swift in Sources */,
+				917CEB5C1C50B76F0092AE88 /* FbLoginViewController.swift in Sources */,
+				917CEB681C50B76F0092AE88 /* CookMovieViewController.swift in Sources */,
+				917CEB601C50B76F0092AE88 /* tabBarController.swift in Sources */,
+				917CEB631C50B76F0092AE88 /* AboutMetableViewController.swift in Sources */,
+				917CEB641C50B76F0092AE88 /* CookOnlieTableViewController.swift in Sources */,
+				917CEB651C50B76F0092AE88 /* CookTableViewCell.swift in Sources */,
 				91AD1FE91C4CB2BA004A6480 /* AppDelegate.swift in Sources */,
-				91E8E5881C4D2954002E587A /* CookTableViewCell.swift in Sources */,
-				91AD200C1C4CB416004A6480 /* vageList.swift in Sources */,
-				91E8E5801C4D2954002E587A /* BuyStep1ViewController.swift in Sources */,
-				91E8E58D1C4D2954002E587A /* MyDataViewController.swift in Sources */,
-				91E8E5831C4D2954002E587A /* tabBarController.swift in Sources */,
-				91E8E5821C4D2954002E587A /* MapViewController.swift in Sources */,
-				91E8E58C1C4D2954002E587A /* MyOrderTableViewController.swift in Sources */,
+				917CEB5D1C50B76F0092AE88 /* BuyStep1ViewController.swift in Sources */,
+				917CEB5F1C50B76F0092AE88 /* MapViewController.swift in Sources */,
+				917CEB5E1C50B76F0092AE88 /* AboutMeNavController.swift in Sources */,
+				917CEB671C50B76F0092AE88 /* ForCookNavController.swift in Sources */,
+				917CEB621C50B76F0092AE88 /* MyAnnotation.swift in Sources */,
+				917CEB691C50B76F0092AE88 /* MyOrderTableViewController.swift in Sources */,
+				917CEB611C50B76F0092AE88 /* F-BLoginViewController-old.swift in Sources */,
+				917CEB6A1C50B76F0092AE88 /* MyDataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
