@@ -8,25 +8,76 @@
 
 import UIKit
 import FBSDKLoginKit
-
+import Alamofire
+import SwiftyJSON
 
 class FbLoginViewController: UIViewController {
     
+    @IBOutlet weak var email: UITextField!
+
+    
+    @IBOutlet weak var password: UITextField!
     
     
-    @IBAction func KeyInEmail(sender: AnyObject) {
-    }
-    
-    @IBAction func KeyInPassword(sender: AnyObject) {
-    }
     @IBAction func FbLoginAction(sender: AnyObject) {
         
     }
     
+    @IBAction func loginActionButton(sender: AnyObject) {
+        postDataToServer()
+    }
     
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
+    }
+
+    func postDataToServer(){
+        let userUrl = "http://139.162.37.39/"
+        let apiPath = userUrl + "api/v1/login"
+        let dic = ["email": self.email.text!,"password": self.password.text! ]
+
+        
+        
+        Alamofire.request(.POST, apiPath, parameters: dic, encoding: .JSON).responseJSON { response in
+            switch response.result {
+            case .Success(let data):
+                let responseJson = JSON(data)
+                let auth_token = data["auth_token"]
+                
+                print(data["auth_token"])
+            case .Failure(let error):
+                print("\(error)")
+            //  TODO:      400, 401, 404, 500 print("Request failed with error: \(error)")
+                
+            }
+            
+        }
+    }
     
+
+//        Alamofire.request(.POST, apiPath, parameters: dic, encoding: .JSON).responseJSON { response in
+//    switch response.result {
+//        case .Success(let data):
+//        print(data)
+//        case .Failure(let error):
+//            print(error)
+//            //TODO:      400, 401, 404, 500 print("Request failed with error: \(error)")
+//    }
+//        }
+//    }
+//    
+
+
+
     func loginButton(FbLoginBu: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print("User Logged In")
         

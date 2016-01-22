@@ -40,19 +40,10 @@
                                         <state key="normal" title="確   定">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                    </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YB5-Je-wWn">
-                                        <rect key="frame" x="145" y="200" width="309" height="30"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="309" id="1DL-JD-baC"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                         <connections>
-                                            <action selector="KeyInEmail:" destination="N0B-xB-70y" eventType="editingDidEndOnExit" id="VEo-WX-1wH"/>
+                                            <action selector="loginActionButton:" destination="N0B-xB-70y" eventType="touchUpInside" id="NF0-T1-Vaf"/>
                                         </connections>
-                                    </textField>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="帳   號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYf-I8-XWP">
                                         <rect key="frame" x="163" y="176" width="37" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -89,6 +80,18 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YB5-Je-wWn">
+                                        <rect key="frame" x="145" y="200" width="309" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="309" id="1DL-JD-baC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                                        <connections>
+                                            <action selector="KeyInEmail:" destination="N0B-xB-70y" eventType="editingDidEndOnExit" id="VEo-WX-1wH"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -124,6 +127,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="FBLogin" image="Facebook-48" selectedImage="Facebook-48" id="j8a-yn-b7T"/>
                     <navigationItem key="navigationItem" id="Vz7-Jb-gmB"/>
+                    <connections>
+                        <outlet property="email" destination="YB5-Je-wWn" id="9jX-m5-2MV"/>
+                        <outlet property="password" destination="2Qv-eS-u8Q" id="tcA-Pm-ckX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGq-US-jG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

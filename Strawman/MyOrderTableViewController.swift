@@ -20,8 +20,8 @@ class MyOrderTableViewController: UITableViewController {
 
     
     func getDataFromServer(){
-        let userUrl = "http://139.162.37.39/api/v1"
-        let apiPath = userUrl + "/users/"
+        let userUrl = "http://139.162.37.39/"
+        let apiPath = userUrl + "api/v1/users/"
         
         
         Alamofire.request(.GET, apiPath,parameters: nil).responseJSON { response in switch response.result {
@@ -36,7 +36,7 @@ class MyOrderTableViewController: UITableViewController {
             let address = subJson["address"].stringValue
             let mobil_num = subJson["mobil_num"].stringValue
             let email = subJson["email"].stringValue
-            let user = ([id: id, name: name, address: address, mobil_num: mobil_num, email: email])
+//            let user = ([id: id, name: name, address: address, mobil_num: mobil_num, email: email])
 
 //            print(" \(user)")
 

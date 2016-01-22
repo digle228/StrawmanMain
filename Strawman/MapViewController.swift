@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
-
+import Parse
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
     
     
@@ -22,7 +22,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     let geoCoder = CLGeocoder()
     
-    
+    var parseGeopointArray:[CLGeocoder]!
+
+    var parseUserData:[PFObject]!
+    var data = [PFObject]()
     
     
     func showLocation(timer:NSTimer) {
@@ -59,19 +62,41 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var notification:UILocalNotification = UILocalNotification()
-        notification.alertBody = "熱門訊息通知!"
-        notification.fireDate = NSDate(timeIntervalSinceNow: 1)
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+//        var notification:UILocalNotification = UILocalNotification()
+//        notification.alertBody = "熱門訊息通知!"
+//        notification.fireDate = NSDate(timeIntervalSinceNow: 1)
+//        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+//
+    
+                //    let gf2 = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.1336, 121.5650), title: "102", subtitle: "who's girl", weigth: 51)
+//    var user = PFUser.currentUser()
+        let query = PFUser.query()
+        query?.findObjectsInBackgroundWithBlock{
+            (objects:[PFObject]?, error:NSError?) -> Void in
+            if error == nil {
+                for object:PFObject! in objects!{
+                    let user:PFUser = object as! PFUser
+                    
+                    self.data.append(user)
+                    print(self.data)
+                }
+            }
+        }
+        
+        
+        
+        
 
         
-        
-        
+    
+ 
+
+
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
-        NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "showLocation:", userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "showLocation:", userInfo: nil, repeats: true)
         
         // Do any additional setup after loading the view.
     }
