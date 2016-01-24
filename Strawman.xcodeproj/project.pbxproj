@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		748ACCB6E1BCBA91CA2DC5F1 /* Pods_Strawman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B2C445A61D1644B875AEF2 /* Pods_Strawman.framework */; };
+		915114051C53265400148A81 /* UserQRcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915114041C53265400148A81 /* UserQRcodeViewController.swift */; };
 		917CEB5C1C50B76F0092AE88 /* FbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB4D1C50B76F0092AE88 /* FbLoginViewController.swift */; };
 		917CEB5D1C50B76F0092AE88 /* BuyStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB4E1C50B76F0092AE88 /* BuyStep1ViewController.swift */; };
 		917CEB5E1C50B76F0092AE88 /* AboutMeNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917CEB4F1C50B76F0092AE88 /* AboutMeNavController.swift */; };
@@ -28,12 +29,15 @@
 		91AD1FE91C4CB2BA004A6480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AD1FE81C4CB2BA004A6480 /* AppDelegate.swift */; };
 		91AD20111C4CB4A5004A6480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AD20101C4CB4A5004A6480 /* Main.storyboard */; };
 		91E8E58F1C4D29D5002E587A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E8E58E1C4D29D5002E587A /* Images.xcassets */; };
+		91F00A541C53D19B005A9F66 /* VegeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F00A531C53D19B005A9F66 /* VegeTableViewController.swift */; };
+		91F00A561C53DE4F005A9F66 /* vegeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F00A551C53DE4F005A9F66 /* vegeTableViewCell.swift */; };
 		91FFD42D1C4CA86400E93E72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD4291C4CA86400E93E72 /* Assets.xcassets */; };
 		91FFD42E1C4CA86400E93E72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD42A1C4CA86400E93E72 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D2F3AA976FA26695CC97CB5 /* Pods-Strawman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strawman.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Strawman/Pods-Strawman.debug.xcconfig"; sourceTree = "<group>"; };
+		915114041C53265400148A81 /* UserQRcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserQRcodeViewController.swift; sourceTree = "<group>"; };
 		917CEB4D1C50B76F0092AE88 /* FbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbLoginViewController.swift; sourceTree = "<group>"; };
 		917CEB4E1C50B76F0092AE88 /* BuyStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyStep1ViewController.swift; sourceTree = "<group>"; };
 		917CEB4F1C50B76F0092AE88 /* AboutMeNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeNavController.swift; sourceTree = "<group>"; };
@@ -55,6 +59,8 @@
 		91AD20101C4CB4A5004A6480 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		91E8E5341C4D123C002E587A /* Strawman-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Strawman-Bridging-Header.h"; sourceTree = "<group>"; };
 		91E8E58E1C4D29D5002E587A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		91F00A531C53D19B005A9F66 /* VegeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VegeTableViewController.swift; sourceTree = "<group>"; };
+		91F00A551C53DE4F005A9F66 /* vegeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vegeTableViewCell.swift; sourceTree = "<group>"; };
 		91FFD4141C4CA81000E93E72 /* Strawman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strawman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FFD4291C4CA86400E93E72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91FFD42A1C4CA86400E93E72 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,6 +95,7 @@
 			children = (
 				917CEB4D1C50B76F0092AE88 /* FbLoginViewController.swift */,
 				917CEB6B1C50BAD20092AE88 /* LoginViewController.swift */,
+				915114041C53265400148A81 /* UserQRcodeViewController.swift */,
 				917CEB4E1C50B76F0092AE88 /* BuyStep1ViewController.swift */,
 				917CEB4F1C50B76F0092AE88 /* AboutMeNavController.swift */,
 				917CEB501C50B76F0092AE88 /* MapViewController.swift */,
@@ -97,6 +104,8 @@
 				917CEB531C50B76F0092AE88 /* MyAnnotation.swift */,
 				917CEB541C50B76F0092AE88 /* AboutMetableViewController.swift */,
 				917CEB551C50B76F0092AE88 /* CookOnlieTableViewController.swift */,
+				91F00A551C53DE4F005A9F66 /* vegeTableViewCell.swift */,
+				91F00A531C53D19B005A9F66 /* VegeTableViewController.swift */,
 				917CEB561C50B76F0092AE88 /* CookTableViewCell.swift */,
 				917CEB571C50B76F0092AE88 /* CookTableViewCell.xib */,
 				917CEB581C50B76F0092AE88 /* ForCookNavController.swift */,
@@ -280,8 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				917CEB5C1C50B76F0092AE88 /* FbLoginViewController.swift in Sources */,
+				915114051C53265400148A81 /* UserQRcodeViewController.swift in Sources */,
 				917CEB681C50B76F0092AE88 /* CookMovieViewController.swift in Sources */,
 				917CEB601C50B76F0092AE88 /* tabBarController.swift in Sources */,
+				91F00A561C53DE4F005A9F66 /* vegeTableViewCell.swift in Sources */,
 				917CEB631C50B76F0092AE88 /* AboutMetableViewController.swift in Sources */,
 				917CEB641C50B76F0092AE88 /* CookOnlieTableViewController.swift in Sources */,
 				917CEB6E1C51C5AE0092AE88 /* user.swift in Sources */,
@@ -294,6 +305,7 @@
 				917CEB621C50B76F0092AE88 /* MyAnnotation.swift in Sources */,
 				917CEB6C1C50BAD20092AE88 /* LoginViewController.swift in Sources */,
 				917CEB691C50B76F0092AE88 /* MyOrderTableViewController.swift in Sources */,
+				91F00A541C53D19B005A9F66 /* VegeTableViewController.swift in Sources */,
 				917CEB611C50B76F0092AE88 /* F-BLoginViewController-old.swift in Sources */,
 				917CEB6A1C50B76F0092AE88 /* MyDataViewController.swift in Sources */,
 			);

@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import Parse
+import QRCode
 
 class AboutMetableViewController: UITableViewController {
+    @IBOutlet weak var QrcodeImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        QrcodeImage.image = {
+            var qrCode = QRCode("auth_token")!
+            //            qrCode.size = self.QrcodeImage.bounds.size
+            //            qrCode.color = CIColor(rgba: "FFCD0C")
+            qrCode.backgroundColor = CIColor(rgba: "FFCD0C")
+            qrCode.errorCorrection = .High
+            return qrCode.image }()
         
+        
+
         
 //        self.tableView.backgroundView = BackGround()
         

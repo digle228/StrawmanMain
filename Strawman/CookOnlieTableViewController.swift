@@ -9,11 +9,20 @@
 import UIKit
 
 class CookOnlieTableViewController: UITableViewController {
+    
+    var tableData = []
+    var selectedCellURL : String?
+    
+    
     var vagetabletype = ["根莖類", "瓜果類", "葉菜類", "辛香料"]
    
     
-    var 根莖類 = ["地瓜", "芋頭", "甜菜根", "紅白蘿蔔", "馬玲薯", "大頭菜"] //6
-
+    var 根莖類 = ["地瓜", "芋頭", "甜菜根", "紅白蘿蔔", "馬鈴薯", "大頭菜"] //6
+    var 根莖類url1 = ["https://www.youtube.com/results?search_query=()地瓜料理",
+    "https://www.youtube.com/results?search_query=芋頭料理", "https://www.youtube.com/results?search_query=甜菜根料理", "https://www.youtube.com/results?search_query=紅白蘿蔔料理", "https://www.youtube.com/results?search_query=+馬鈴薯料理", "https://www.youtube.com/results?search_query=大頭菜料理"]
+    
+    
+    
     var 瓜果類 = ["小黃瓜", "大黃瓜", "絲瓜", "南瓜", "瓠瓜", "四季豆", "甜豆", "茄子", "彩椒", "青椒", "青白花", "椰菜", "花生"] //13
     
     var 葉菜類 = ["大小白菜","萵苣", "茼蒿", "高麗菜", "青江菜", "豆苗", "小松菜", "黑葉白", "菊苣", "韭菜", "包心", "白娃娃菜", "芥菜", "空心菜", "芥藍菜", "天津", "白菜", "地瓜葉" ]//18
@@ -31,6 +40,8 @@ class CookOnlieTableViewController: UITableViewController {
 //        
 //    }
 //    
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +50,9 @@ class CookOnlieTableViewController: UITableViewController {
         self.contentTableView.registerNib(nib, forCellReuseIdentifier: "cellStyle")
         
         self.contentTableView.rowHeight = UITableViewAutomaticDimension
-        self.contentTableView.estimatedRowHeight = 50
-        
+        self.contentTableView.estimatedRowHeight = 100
+        self.tableView.reloadData()
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -80,6 +92,7 @@ class CookOnlieTableViewController: UITableViewController {
         default:
             break
         }
+        
         return title
     }
     
@@ -101,7 +114,6 @@ class CookOnlieTableViewController: UITableViewController {
         default:
             break
         }
-     
         return rowCount
     }
 
@@ -134,10 +146,14 @@ class CookOnlieTableViewController: UITableViewController {
     //到  MovieWeb頁面
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+//        var rowData: NSArray = [indexPath.row] as NSArray
         
-        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("youtubeCookMovie")
-        
-        self.presentViewController(controller!, animated: true, completion: nil)
+
+//        let myWebView = self.storyboard?.instantiateViewControllerWithIdentifier("youtubeCookMovie")
+//        as! CookMovieViewController
+//
+//        self.presentViewController(myWebView, animated: true, completion: nil)
     }
     
     
