@@ -13,7 +13,6 @@ import SwiftyJSON
 
 class FbLoginViewController: UIViewController {
     
-//    var auth_token = [String]()
     
     var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
@@ -31,46 +30,58 @@ class FbLoginViewController: UIViewController {
     }
     
     @IBAction func loginActionButton(sender: AnyObject) {
-        
+
         let email = self.email.text
         let password = self.password.text
-        
+
         if (email?.utf8.count < 4 || password?.utf8.count < 5){
-            
             let alert = UIAlertController(title: "錯誤", message: "請輸入正確email及密碼", preferredStyle: UIAlertControllerStyle.Alert )
             let callAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Destructive, handler: { action in })
             
             alert.addAction(callAction)
             
             self.presentViewController(alert, animated: true, completion: nil)
-
-        }else{
             
+        }else {
             postDataToServer()
-            print(self.appDelegate.auth_token)
-            
-//                let alert = UIAlertController(title: "成功", message: "登入頁面", preferredStyle: UIAlertControllerStyle.Alert )
-//                let callAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Destructive, handler: { action in })
-//                
-//                alert.addAction(callAction)
-           
+
+                let alert = UIAlertController(title: "成功", message: "登入頁面", preferredStyle: UIAlertControllerStyle.Alert )
+                let callAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Destructive, handler: { action in })
+                alert.addAction(callAction)
             self.dismissViewControllerAnimated(true, completion: nil)
-            
-            
 
             
         }
         
+        
+        
+        
+    }
+    
+    func checkUser(){
+//        let LoginPage = self.storyboard?.instantiateViewControllerWithIdentifier("FBLoginViewController")
+//        
+//        let buyVegetable = self.storyboard?.instantiateViewControllerWithIdentifier("BuyStep1ViewController")
+//        
+        if FBSDKAccessToken.currentAccessToken() != nil || self.appDelegate.message == "Ok" {
+            self.dismissViewControllerAnimated(true, completion: nil)
+            //            self.presentViewController(buyVegetable!, animated: true, completion: nil)
+            
+        } else {
+            //            self.presentViewController(LoginPage!, animated: true, completion: nil)
+            //                        self.dismissViewControllerAnimated(true, completion: nil)
+            
+            
+        }
+        
 
-        
-        
     }
     
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        checkUser()
         
-
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -89,12 +100,16 @@ class FbLoginViewController: UIViewController {
             switch response.result {
             case .Success(let data):
                 let responseJson = JSON(data)
-                let token = data["auth_token"] as! String
-                self.appDelegate.auth_token.append(token)
+                let token = data["auth_token"] as? String
+                let message = data["message"] as? String
+                self.appDelegate.auth_token = token!
+                self.appDelegate.message = message!
+//                print(data)
+                print(token)
+                print(message)
 
             case .Failure(let error):
                 print("\(error)")
-                
                 //  TODO:      400, 401, 404, 500 print("Request failed with error: \(error)")
                 
             }
@@ -161,43 +176,16 @@ class FbLoginViewController: UIViewController {
             }
         })
     }
+    
     //判斷FB使用者是否登入
+    
+    
+    
     override func viewWillAppear(animated: Bool) {
-        
-        
-        let buyVegetable = self.storyboard?.instantiateViewControllerWithIdentifier("BuyStep1ViewController")
-        if let accessToken = FBSDKAccessToken.currentAccessToken()  {
-            
-            self.dismissViewControllerAnimated(true, completion: nil)
-            print("\(buyVegetable)\(accessToken)")
-            //            self.presentViewController(buyVegetable!, animated: true, completion: nil)
-            
-        } else {
-            
-            let fbLoginPage = self.storyboard?.instantiateViewControllerWithIdentifier("FBLoginViewController")
-            
-            print("\(fbLoginPage)")
-            
-            //            self.dismissViewControllerAnimated(true, completion: nil)
-            
-            
-        }
         
     }
     
-    //    override func viewDidDisappear(animated: Bool) {
-    //        if let accessToken = FBSDKAccessToken.currentAccessToken() {
-    //            let buyVegetable = self.storyboard?.instantiateViewControllerWithIdentifier("BuyStep1ViewController")
-    //            self.tabBarController?.presentViewController(buyVegetable!, animated: true, completion: nil)
-    //
-    //
-    //
-    //        } else {
-    //            let fbLoginPage = self.storyboard?.instantiateViewControllerWithIdentifier("FBLoginViewController")
-    //
-    //    }
-    //    }
-    
+ 
     
     
     override func didReceiveMemoryWarning() {

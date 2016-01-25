@@ -12,37 +12,36 @@ import FBSDKLoginKit
 
 class AboutMeNavController: UINavigationController {
     
+    var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     
     //判斷FB或使用者是否登入
-    
-    override func viewWillAppear(animated: Bool) {
-    
-        if let accessToken = FBSDKAccessToken.currentAccessToken() {
-            let AboutMe = self.storyboard?.instantiateViewControllerWithIdentifier("AboutMeNavController")
+    func checkUser(){
+        //        let buyVegetable = self.storyboard?.instantiateViewControllerWithIdentifier("BuyStep1ViewController")
+        
+        let fbLoginPage = self.storyboard?.instantiateViewControllerWithIdentifier("FBLoginViewController")
+        
+        if FBSDKAccessToken.currentAccessToken() != nil || self.appDelegate.message == "Ok" {
+            print(self.appDelegate.message)
+            //            self.presentViewController(buyVegetable!, animated: true, completion: nil)
             
-            print("\(AboutMe)\(accessToken)")
-
             
         } else {
-            let fbLoginPage = self.storyboard?.instantiateViewControllerWithIdentifier("FBLoginViewController")
-            
             self.presentViewController(fbLoginPage!, animated: true, completion: nil)
+            //            self.dismissViewControllerAnimated(true, completion: nil)
             
-            print("\(fbLoginPage)")
-
-            }
-
+        }
         
         
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkUser()
         
         
-        
-           // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {

@@ -11,23 +11,22 @@ import FBSDKLoginKit
 
 class BuyStep1ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    @IBOutlet weak var textLabel: UILabel!
+    var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     
     var arr : NSArray = []
     
     //判斷FB使用者是否登入
-    
-    override func viewWillAppear(animated: Bool) {
-        if let accessToken = FBSDKAccessToken.currentAccessToken() {
-            let buyVegetable = self.storyboard?.instantiateViewControllerWithIdentifier("BuyStep1ViewController")
-            print("\(buyVegetable)\(accessToken)")
-
-            
+    func checkUser(){
+        //        let buyVegetable = self.storyboard?.instantiateViewControllerWithIdentifier("BuyStep1ViewController")
+        
+        let fbLoginPage = self.storyboard?.instantiateViewControllerWithIdentifier("FBLoginViewController")
+        
+        if FBSDKAccessToken.currentAccessToken() != nil || self.appDelegate.message == "Ok" {
+            print(self.appDelegate.message)
             
         } else {
-            let fbLoginPage = self.storyboard?.instantiateViewControllerWithIdentifier("FBLoginViewController")
-            //            self.dismissViewControllerAnimated(true, completion: nil)
-            
             self.presentViewController(fbLoginPage!, animated: true, completion: nil)
             
         }
@@ -35,11 +34,13 @@ class BuyStep1ViewController: UIViewController, UIPickerViewDataSource, UIPicker
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        arr = ["幸福小倆口(約1-2人份，每週四到六餐)", "全家草幸福(3-4人份，每週四到六餐)"]
+        checkUser()
+        arr = ["幸福小倆口","全家草幸福"]
         
-        // Do any additional setup after loading the view.
+        //(約1-2人份，每週四到六餐)(3-4人份，每週四到六餐)
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,6 +61,14 @@ class BuyStep1ViewController: UIViewController, UIPickerViewDataSource, UIPicker
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if row == 0 {
+            textLabel.text = "【約1-2人份，每週四到六餐】"
+        }else{
+            textLabel.text = "【約3-4人份，每週四到六餐】"
+            textLabel.textColor = UIColor.blackColor()
+
+        }
+        
         return "\(arr[row])"
     }
     /*

@@ -13,13 +13,14 @@ import QRCode
 class UserQRcodeViewController: UIViewController {
     @IBOutlet weak var QrcodeImage: UIImageView!
 
-    
+    var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         QrcodeImage.image = {
-            var qrCode = QRCode("auth_token")!
+            var qrCode = QRCode(appDelegate.auth_token)!
 //            qrCode.size = self.QrcodeImage.bounds.size
 //            qrCode.color = CIColor(rgba: "FFCD0C")
             qrCode.backgroundColor = CIColor(rgba: "FFCD0C")

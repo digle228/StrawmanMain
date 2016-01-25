@@ -52,7 +52,7 @@ class CookOnlieTableViewController: UITableViewController {
         self.contentTableView.rowHeight = UITableViewAutomaticDimension
         self.contentTableView.estimatedRowHeight = 100
         self.tableView.reloadData()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

@@ -10,10 +10,14 @@ import UIKit
 import Parse
 
 class VegeTableViewController: UITableViewController {
-   
-    var refreshController = UIRefreshControl()
-
     
+    @IBOutlet weak var refresh: UIRefreshControl!
+    
+    @IBAction func refreshcontroller(sender: AnyObject) {
+        
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
+    }
     
     var vegeArray:[PFObject]!
     
@@ -23,10 +27,8 @@ class VegeTableViewController: UITableViewController {
     
     
     
-    
     override func viewDidLoad() {
         
-
         super.viewDidLoad()
         
         let query = PFQuery(className: "Vegetable")
@@ -38,31 +40,9 @@ class VegeTableViewController: UITableViewController {
             }
         }
         
-        // set up the refresh control
-        self.refreshController.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshController.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
-        self.tableView?.addSubview(refreshController)
-        
-        self.loadStockQuoteItems()
-        
         
     }
-    func refresh(sender:AnyObject) {
-        self.loadStockQuoteItems()
-    }
-    
-    
-    func loadStockQuoteItems() {
-        StockQuoteItem.getFeedItems({ (items, error) in
-            if error != nil {
-                let alert = UIAlertController(title: "Error", message: "Could not load stock quotes \(error?.localizedDescription)", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
-            }
-            self.itemsArray = items
-            self.tableView?.reloadData()
-        })
-    }
+ 
     
     
     

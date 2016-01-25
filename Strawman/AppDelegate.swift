@@ -17,12 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    var auth_token = [String]()
-    
+    var auth_token = String()
+    var message = String()
+    let delegate = UIApplication.sharedApplication().delegate as? AppDelegate
 
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-//        _ = UIApplication.sharedApplication().delegate as! AppDelegate
 
         
         Parse.setApplicationId("4d8AR23rbppQJGOo6iJD17sFXUHXcuupueSytFt2",clientKey: "4MmkX4gJ0dQtiOM9QQUO6xrq6JdSmorihp8S4MVF")
