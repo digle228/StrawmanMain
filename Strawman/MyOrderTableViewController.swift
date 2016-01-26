@@ -12,19 +12,22 @@ import SwiftyJSON
 
 class MyOrderTableViewController: UITableViewController {
     
-    
-    
+    var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
     @IBOutlet var dataTableView: UITableView!
 
     var userData = [String]()
-
+    
+    
+    
     
     func getDataFromServer(){
+         print("order頁面的auth_token ＝\(appDelegate.auth_token)")
         let userUrl = "http://139.162.37.39/"
-        let apiPath = userUrl + "api/v1/users/"
-        
-        
-        Alamofire.request(.GET, apiPath,parameters: nil).responseJSON { response in switch response.result {
+        let apiPath = userUrl + "api/v1/orders"
+        let dic = ["auth_token": appDelegate.auth_token]
+   
+        Alamofire.request(.GET, apiPath,parameters: dic).responseJSON { response in switch response.result {
         case .Success(let data):
             
             let result = JSON(data)["data"]
@@ -33,21 +36,22 @@ class MyOrderTableViewController: UITableViewController {
             
             let id = subJson["id"].stringValue
             let name = subJson["name"].stringValue
-            let address = subJson["address"].stringValue
-            let mobil_num = subJson["mobil_num"].stringValue
-            let email = subJson["email"].stringValue
-//            let user = ([id: id, name: name, address: address, mobil_num: mobil_num, email: email])
+            let address = subJson["delivery_address"].stringValue
+            let date = subJson["delivery_date"].stringValue
+            let spice = subJson["spice"].stringValue
+            let rice = subJson["rice"].stringValue
+            let items = subJson["items"].stringValue
+            print(name)
+
+//            let order = ([id: id, name: name, address: address, mobil_num: mobil_num, email: email])
 
 //            print(" \(user)")
 
-            self.userData.append(id)
-            self.userData.append(name)
-            self.userData.append(address)
-            self.userData.append(mobil_num)
-            self.userData.append(email)
-
-
-
+//            self.userData.append(id)
+//            self.userData.append(name)
+//            self.userData.append(address)
+//            self.userData.append(mobil_num)
+//            self.userData.append(email)
 
 
             

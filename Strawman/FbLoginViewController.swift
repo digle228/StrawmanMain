@@ -16,6 +16,14 @@ class FbLoginViewController: UIViewController {
     
     var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
+    
+    
+    @IBAction func closeButton(sender: AnyObject) {
+        
+        let home = self.storyboard?.instantiateViewControllerWithIdentifier("tabBarController")
+        self.presentViewController(home!, animated: false , completion: nil)
+    }
+    
     @IBOutlet weak var email: UITextField!
     
     @IBOutlet weak var password: UITextField!
@@ -30,10 +38,10 @@ class FbLoginViewController: UIViewController {
     }
     
     @IBAction func loginActionButton(sender: AnyObject) {
-
+        
         let email = self.email.text
         let password = self.password.text
-
+        
         if (email?.utf8.count < 4 || password?.utf8.count < 5){
             let alert = UIAlertController(title: "錯誤", message: "請輸入正確email及密碼", preferredStyle: UIAlertControllerStyle.Alert )
             let callAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Destructive, handler: { action in })
@@ -44,12 +52,12 @@ class FbLoginViewController: UIViewController {
             
         }else {
             postDataToServer()
-
-                let alert = UIAlertController(title: "成功", message: "登入頁面", preferredStyle: UIAlertControllerStyle.Alert )
-                let callAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Destructive, handler: { action in })
-                alert.addAction(callAction)
+            
+            let alert = UIAlertController(title: "成功", message: "登入頁面", preferredStyle: UIAlertControllerStyle.Alert )
+            let callAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Destructive, handler: { action in })
+            alert.addAction(callAction)
             self.dismissViewControllerAnimated(true, completion: nil)
-
+            
             
         }
         
@@ -57,16 +65,16 @@ class FbLoginViewController: UIViewController {
         
         
     }
-    
+    //判斷FB使用者是否登入
+
     func checkUser(){
-//        let LoginPage = self.storyboard?.instantiateViewControllerWithIdentifier("FBLoginViewController")
-//        
-//        let buyVegetable = self.storyboard?.instantiateViewControllerWithIdentifier("BuyStep1ViewController")
-//        
+        //        let LoginPage = self.storyboard?.instantiateViewControllerWithIdentifier("FBLoginViewController")
+        //
+        //        let buyVegetable = self.storyboard?.instantiateViewControllerWithIdentifier("BuyStep1ViewController")
+        //
         if FBSDKAccessToken.currentAccessToken() != nil || self.appDelegate.message == "Ok" {
             self.dismissViewControllerAnimated(true, completion: nil)
             //            self.presentViewController(buyVegetable!, animated: true, completion: nil)
-            
         } else {
             //            self.presentViewController(LoginPage!, animated: true, completion: nil)
             //                        self.dismissViewControllerAnimated(true, completion: nil)
@@ -74,7 +82,7 @@ class FbLoginViewController: UIViewController {
             
         }
         
-
+        
     }
     
     
@@ -104,10 +112,9 @@ class FbLoginViewController: UIViewController {
                 let message = data["message"] as? String
                 self.appDelegate.auth_token = token!
                 self.appDelegate.message = message!
-//                print(data)
                 print(token)
                 print(message)
-
+                
             case .Failure(let error):
                 print("\(error)")
                 //  TODO:      400, 401, 404, 500 print("Request failed with error: \(error)")
@@ -134,7 +141,7 @@ class FbLoginViewController: UIViewController {
     
     func loginButton(FbLoginBu: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print("User Logged In")
-        
+         print(result.token.tokenString)
         if ((error) != nil)
         {
             // Process error
@@ -177,7 +184,6 @@ class FbLoginViewController: UIViewController {
         })
     }
     
-    //判斷FB使用者是否登入
     
     
     
@@ -185,7 +191,7 @@ class FbLoginViewController: UIViewController {
         
     }
     
- 
+    
     
     
     override func didReceiveMemoryWarning() {

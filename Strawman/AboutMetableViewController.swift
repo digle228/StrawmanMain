@@ -26,7 +26,7 @@ class AboutMetableViewController: UITableViewController {
             qrCode.backgroundColor = CIColor(rgba: "FFCD0C")
             qrCode.errorCorrection = .High
             return qrCode.image }()
-        
+         print("我的token\(appDelegate.auth_token)")
         
 
         

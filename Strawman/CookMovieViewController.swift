@@ -16,10 +16,8 @@ class CookMovieViewController: UIViewController, WKNavigationDelegate {
     
     
     
-    
-    var detailItem: PFObject!
+    var vegeUrl : String?
 
-    var vegeArray: [PFObject]!
     
     @IBOutlet weak var viewInWeb: UIView!
     
@@ -39,30 +37,25 @@ class CookMovieViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         
+
         
-        let query = PFQuery(className: "Vegetable")
-        query.findObjectsInBackgroundWithBlock { (array:[PFObject]?, err:NSError?) -> Void in
-            
-            if let array = array {
-                self.vegeArray = array
-                
-            }
-            
 
 //        let url = NSURL(string: "https://www.youtube.com/results?search_query=%E5%9C%B0%E7%93%9C+%E6%96%99%E7%90%86")
 //        _ = SFSafariViewController(URL: url!)
 //        self.dismissViewControllerAnimated(true, completion: nil)
 //        self.presentViewController(controller, animated:true, completion: nil)
-        let vege = self.vegeArray
-            
+
+        
+        
         let webView = WKWebView(frame:self.viewInWeb.frame)
-        webView.navigationDelegate = self
+//        webView.navigationDelegate = self
         self.view.addSubview(webView)
-        let url = NSURL(string: "https://www.youtube.com/results?search_query=%E5%9C%B0%E7%93%9C+%E6%96%99%E7%90%86")
+        let webaddress = vegeUrl!
+        let url = NSURL(string: webaddress)
+        print("my url \(url)")
+        print("my \(webaddress)")
         let request = NSURLRequest(URL: url!)
         webView.loadRequest(request)
-            }
-        
 
     }
 

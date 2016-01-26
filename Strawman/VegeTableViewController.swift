@@ -8,6 +8,8 @@
 
 import UIKit
 import Parse
+import SDWebImage
+
 
 class VegeTableViewController: UITableViewController {
     
@@ -39,10 +41,10 @@ class VegeTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
-        
+//        print("\(vegeArray[0])")
         
     }
- 
+    
     
     
     
@@ -77,49 +79,69 @@ class VegeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell",forIndexPath: indexPath) as! vegeTableViewCell
         let vege = self.vegeArray[indexPath.row]
         cell.vagetableNameLabel.text = vege["Name"] as? String
+        print("\(vege["movieAddress"])")
+                 let roger = vege["RogerThat"] as? PFFile
+                if let urlStr = roger?.url {
+                    let url2 = NSURL(string: urlStr)
+                    let request = NSURLRequest(URL: url2!)
+                    let task2 =
+                    NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data:NSData?, res:NSURLResponse?, err:NSError?) -> Void in
+                        if let data = data {
+                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                cell.Roger.image = UIImage(data: data)
         
-        //        cell.addressLabel.text = vege["address"] as? String
         
-        let roger = vege["RogerThat"] as? PFFile
-        if let urlStrin = roger?.url {
-            let url2 = NSURL(string: urlStrin)
-            let request = NSURLRequest(URL: url2!)
-            let task2 = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data:NSData?, res:NSURLResponse?, err:NSError?) -> Void in
-                if let data = data {
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        cell.Roger.image = UIImage(data: data)
-                        
+                            })
+                        }
+        
                     })
+                    task2.resume()
+        
                 }
-                
-            })
-            task2.resume()
-            
-        }
+        
+        
         
         let photoFile = vege["image"] as? PFFile
-        if let urlStrin = photoFile?.url {
-            let url = NSURL(string: urlStrin)
-            let request = NSURLRequest(URL: url!)
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data:NSData?, res:NSURLResponse?, err:NSError?) -> Void in
-                
-                if let data = data {
-                    let image = UIImage(data: data)
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        cell.vegeImage.image = image
-                        
-                    })
-                }
-                
-            })
-            task.resume()
-            
-        }
+        let urlStr = photoFile?.url
+        let url = NSURL(string: urlStr!)
+        let vegeimageView = cell.vegeImage as! UIImageView
+        vegeimageView.sd_setImageWithURL(url, placeholderImage: nil)
+        
+//        let roger = vege["RogerThat"] as? PFFile
+//        if (let urlStr2 = roger?.url ) == nil {
+//            
+//        } else {
+//            let url2 = NSURL(string: urlStr2)
+//        let rogerTaht = cell.Roger as UIImageView
+//        rogerTaht.sd_setImageWithURL(url2, placeholderImage: nil)
+//        
+//        }
+        
+
+        //        let photoFile = vege["image"] as? PFFile
+        //        if let urlStr = photoFile?.url {
+        //            let url = NSURL(string: urlStr)
+        //
+        //            let request = NSURLRequest(URL: url!)
+        //            let task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data:NSData?, res:NSURLResponse?, err:NSError?) -> Void in
+        //
+        //                if let data = data {
+        //                    let image = UIImage(data: data)
+        //                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        //                        cell.vegeImage.image = image
+        //
+        //                    })
+        //                }
+        //
+        //            })
+        //            task.resume()
+        //
+        //        }
         
         return cell
+        
+        
     }
-    
-    
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -173,20 +195,27 @@ class VegeTableViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let indexPath = self.tableView.indexPathForSelectedRow
-//        if (segue.identifier == "Detail"){
-//        let object: PFObject = vegeArray[indexPath!.row] as PFObject
-//        (segue.destinationViewController as! CookMovieViewController).detailItem = object
-//        print(indexPath!.row)
-//        
-//        
-//        }
-//    }
-//    
+        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            let indexPath = self.tableView.indexPathForSelectedRow
+            let vege = self.vegeArray[indexPath!.row]
+            print(indexPath?.row)
+
+            if  segue.identifier == "Detail"{
+                let movieController = segue.destinationViewController as! CookMovieViewController
+                movieController.vegeUrl =  (vege["movieAddress"] as! String?)
+                print(vege["movieAddress"])
+            }
+            
+
+            
+//            let indexPath = self.tableView.indexPathForSelectedRow
+//            
+//            if (segue.identifier == "Detail"){
+//            let object: PFObject = vegeArray[indexPath!.row] as PFObject
+//            (segue.destinationViewController as! CookMovieViewController).detailItem = object
+//            print(indexPath!.row)
+    //
     
-    
+    }
 }
-
-
 

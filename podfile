@@ -8,6 +8,7 @@ xcodeproj 'Strawman.xcodeproj'
 
 target 'Strawman' do
 
+pod 'SDWebImage'
 pod 'QRCode', '~> 0.5'
 pod 'YYWebImage' 
 pod 'SVProgressHUD'

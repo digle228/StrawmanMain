@@ -52,7 +52,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         //        print("\(userLocation.location?.coordinate)")
         
         
-        let region = MKCoordinateRegionMakeWithDistance(userLocation.location! .coordinate, 2000, 2000)
+        let region = MKCoordinateRegionMakeWithDistance(userLocation.location! .coordinate, 1000, 1000)
         mapView.setRegion(region, animated: true)
         
         
@@ -121,11 +121,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         NSTimer.scheduledTimerWithTimeInterval(3600, target: self, selector: "showLocation:", userInfo: nil, repeats: true)
-        
-        let vege = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.1336, 121.5650), title: "維尼爸", subtitle: "0987987087" )
-        let vege1 = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.044477, 121.532619), title: "桔森", subtitle: "0917809888" )
-        let vege2 = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.045655, 121.531010), title: "大野狼的家", subtitle: "0933566699" )
-        let vege3 = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.045767, 121.532609), title: "小咪咪的家", subtitle: "0988566699")
+//        let calltel = UIApplication.sharedApplication().openURL(NSURL(string:
+//            "tel://0938025295")!)
+//        
+        let vege = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.1336, 121.5650), title: "維尼爸", subtitle: "聯絡維尼爸" )
+        let vege1 = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.044477, 121.532619), title: "桔森", subtitle: "聯絡桔森" )
+        let vege2 = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.045655, 121.531010), title: "大野狼的家", subtitle: "聯絡大野狼" )
+        let vege3 = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.045767, 121.532609), title: "小咪咪的家", subtitle: "聯絡咪咪")
         
         self.mapView.addAnnotation(vege)
         self.mapView.addAnnotation(vege1)

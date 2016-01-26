@@ -39,8 +39,7 @@ class AboutMeNavController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkUser()
-        
-        
+         print(appDelegate.auth_token)
         // Do any additional setup after loading the view.
     }
     
