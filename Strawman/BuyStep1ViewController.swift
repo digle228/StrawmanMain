@@ -21,23 +21,27 @@ class BuyStep1ViewController: UIViewController, UIPickerViewDataSource, UIPicker
     func checkUser(){
         //        let buyVegetable = self.storyboard?.instantiateViewControllerWithIdentifier("BuyStep1ViewController")
         
-        let fbLoginPage = self.storyboard?.instantiateViewControllerWithIdentifier("FBLoginViewController")
-        
-        if FBSDKAccessToken.currentAccessToken() != nil || self.appDelegate.message == "Ok" {
-            print(self.appDelegate.message)
+        let LoginPage = self.storyboard?.instantiateViewControllerWithIdentifier("FBLoginViewController")
+
+        if self.appDelegate.auth_token != ""  {
+            
             
         } else {
-            self.presentViewController(fbLoginPage!, animated: true, completion: nil)
+            
+            self.presentViewController(LoginPage!, animated: true, completion: nil)
             
         }
         
     }
     
-    
+    override func viewWillAppear(animated: Bool) {
+        checkUser()
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkUser()
+
         arr = ["幸福小倆口","全家草幸福"]
         
         //(約1-2人份，每週四到六餐)(3-4人份，每週四到六餐)

@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var auth_token = String()
     var message = String()
     let delegate = UIApplication.sharedApplication().delegate as? AppDelegate
-
+    
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
@@ -53,7 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let types: UIRemoteNotificationType = [.Alert, .Badge, .Sound]
             application.registerForRemoteNotificationTypes(types)
         }
-        
         
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         // Override point for customization after application launch.

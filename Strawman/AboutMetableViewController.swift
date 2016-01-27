@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import QRCode
+import FBSDKLoginKit
 
 class AboutMetableViewController: UITableViewController {
     @IBOutlet weak var QrcodeImage: UIImageView!
@@ -42,6 +43,32 @@ class AboutMetableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    
+    
+    //判斷FB或使用者是否登入
+    func checkUser(){
+        //        let buyVegetable = self.storyboard?.instantiateViewControllerWithIdentifier("BuyStep1ViewController")
+        
+        let fbLoginPage = self.storyboard?.instantiateViewControllerWithIdentifier("FBLoginViewController")
+        
+        if self.appDelegate.auth_token != "" {
+            //            self.presentViewController(buyVegetable!, animated: true, completion: nil)
+            
+            
+        } else {
+            self.presentViewController(fbLoginPage!, animated: true, completion: nil)
+            //            self.dismissViewControllerAnimated(true, completion: nil)
+            
+        }
+        
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        checkUser()
+        
     }
 
     // MARK: - Table view data source

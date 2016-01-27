@@ -10,7 +10,9 @@ import UIKit
 import CoreLocation
 import MapKit
 import Parse
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
+
+
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UISearchBarDelegate  {
     
     
     
@@ -34,9 +36,59 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     
+    var searchController:UISearchController!
+    var annotationInsearch:MKAnnotation!
+    var localSearchRequest:MKLocalSearchRequest!
+    var localSearch:MKLocalSearch!
+    var localSearchResponse:MKLocalSearchResponse!
+    var error:NSError!
+    var pointAnnotation:MKPointAnnotation!
+    var pinAnnotationView:MKPinAnnotationView!
     
     
+    //Navagation 搜尋按鈕 http://sweettutos.com/2015/04/24/swift-mapkit-tutorial-series-how-to-search-a-place-address-or-poi-in-the-map/
+    @IBAction func searchingButton(sender: AnyObject) {
+        
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.hidesNavigationBarDuringPresentation = false
+        self.searchController.searchBar.delegate = self
+        presentViewController(searchController, animated: true, completion: nil)
+    }
     
+    
+    //Navagation 搜尋按鈕
+    func searchBarSearchButtonClicked(searchBar: UISearchBar){
+        //1
+        searchBar.resignFirstResponder()
+        dismissViewControllerAnimated(true, completion: nil)
+        if self.mapView.annotations.count != 0{
+            annotationInsearch = self.mapView.annotations[0]
+            self.mapView.removeAnnotation(annotation)
+        }
+        //2
+        localSearchRequest = MKLocalSearchRequest()
+        localSearchRequest.naturalLanguageQuery = searchBar.text
+        localSearch = MKLocalSearch(request: localSearchRequest)
+        localSearch.startWithCompletionHandler { (localSearchResponse, error) -> Void in
+            
+            if localSearchResponse == nil{
+                let alertController = UIAlertController(title: nil, message: "Place Not Found", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
+                return
+            }
+            //3
+            self.pointAnnotation = MKPointAnnotation()
+            self.pointAnnotation.title = searchBar.text
+            self.pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: localSearchResponse!.boundingRegion.center.latitude, longitude:     localSearchResponse!.boundingRegion.center.longitude)
+            
+            
+            self.pinAnnotationView = MKPinAnnotationView(annotation: self.pointAnnotation, reuseIdentifier: nil)
+            self.mapView.centerCoordinate = self.pointAnnotation.coordinate
+            self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
+        }
+    }
+
     
     //目前使用者的位置
     
@@ -68,7 +120,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 for object in objects! {
                     let user:PFUser = object as! PFUser
                     self.data.append(user as PFObject)
-//                    print(self.data)
+                    //                    print(self.data)
                     let location = user["geopoint"] as! PFGeoPoint
                     let name = user["name"] as! String
                     let mobile = user["mobile_num"] as! String
@@ -100,12 +152,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         
     }
+    
+
+    
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         
         showUserslocationFromParse()
-        
+
         
         //        var notification:UILocalNotification = UILocalNotification()
         //        notification.alertBody = "熱門訊息通知!"
@@ -113,17 +171,19 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         //        UIApplication.sharedApplication().scheduleLocalNotification(notification)
         //
         
-
-
+        //        let calltel = UIApplication.sharedApplication().openURL(NSURL(string:
+        //            "tel://0938025295")!)
+        //
+        
         
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         NSTimer.scheduledTimerWithTimeInterval(3600, target: self, selector: "showLocation:", userInfo: nil, repeats: true)
-//        let calltel = UIApplication.sharedApplication().openURL(NSURL(string:
-//            "tel://0938025295")!)
-//        
+
+        
+        
         let vege = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.1336, 121.5650), title: "維尼爸", subtitle: "聯絡維尼爸" )
         let vege1 = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.044477, 121.532619), title: "桔森", subtitle: "聯絡桔森" )
         let vege2 = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.045655, 121.531010), title: "大野狼的家", subtitle: "聯絡大野狼" )
@@ -133,27 +193,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.mapView.addAnnotation(vege1)
         self.mapView.addAnnotation(vege2)
         self.mapView.addAnnotation(vege3)
-
-
-
         
-        // Do any additional setup after loading the view.
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }
