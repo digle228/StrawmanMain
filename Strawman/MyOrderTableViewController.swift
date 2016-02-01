@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class MyOrderTableViewController: UITableViewController {
     
-    var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
     
     @IBOutlet var dataTableView: UITableView!
     
@@ -22,10 +22,10 @@ class MyOrderTableViewController: UITableViewController {
     
     
     func getDataFromServer(){
-        print("order頁面的auth_token ＝\(appDelegate.auth_token)")
+//        print("order頁面的auth_token ＝\(auth_token)")
         let userUrl = "http://139.162.37.39/"
         let apiPath = userUrl + "api/v1/orders"
-        let dic = ["auth_token": "MDtxFq_zi8rgmFzt1_eq"]
+        let dic = ["auth_token": "\(auth_token)"]
         
         Alamofire.request(.GET, apiPath,parameters: dic).responseJSON { response in switch response.result {
         case .Success(let data):
@@ -53,8 +53,8 @@ class MyOrderTableViewController: UITableViewController {
                 self.orderData.append(orderindata(json: result))
                 self.orderDate2.append(orderDatainCell)
 //                print(data)
-
-                print(self.orderData)
+                print(auth_token)
+//                print(self.orderData)
                 
                 
                 

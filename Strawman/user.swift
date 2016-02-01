@@ -34,6 +34,6 @@ struct Login{
         self.auth_token = json["auth_token"].stringValue
         self.user_id = json["user_id"].intValue
 
-
+    
     }
 }

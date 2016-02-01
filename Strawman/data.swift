@@ -38,8 +38,8 @@ struct orderindata
         self.spice = dic["spice"].stringValue
         self.rice = dic["rice"].stringValue
         self.items = [Item]()
-        print("aaa \(json["items"])")
-        print("aaa \(json["items"].arrayValue.count)")
+//        print("aaa \(json["items"])")
+//        print("aaa \(json["items"].arrayValue.count)")
 
         for item in dic["items"].arrayValue {
             let data = Item(json: item )

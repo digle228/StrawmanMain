@@ -31,9 +31,15 @@
 		91E481361C574E9400F2C673 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E481351C574E9400F2C673 /* data.swift */; };
 		91E481381C58585200F2C673 /* MyOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E481371C58585200F2C673 /* MyOrderTableViewCell.swift */; };
 		91E4813C1C58A1DD00F2C673 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E4813B1C58A1DD00F2C673 /* UserLocation.swift */; };
+		91E4813E1C59135800F2C673 /* auth_token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E4813D1C59135800F2C673 /* auth_token.swift */; };
+		91E481401C59192A00F2C673 /* PostOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E4813F1C59192A00F2C673 /* PostOrder.swift */; };
 		91E8E58F1C4D29D5002E587A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E8E58E1C4D29D5002E587A /* Images.xcassets */; };
 		91F00A541C53D19B005A9F66 /* VegeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F00A531C53D19B005A9F66 /* VegeTableViewController.swift */; };
 		91F00A561C53DE4F005A9F66 /* vegeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F00A551C53DE4F005A9F66 /* vegeTableViewCell.swift */; };
+		91F808021C5A6865005906E9 /* buyStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F808011C5A6865005906E9 /* buyStep2ViewController.swift */; };
+		91F808061C5B07E4005906E9 /* buyStep3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F808051C5B07E4005906E9 /* buyStep3TableViewCell.swift */; };
+		91F808081C5B0F4D005906E9 /* butStep3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F808071C5B0F4D005906E9 /* butStep3TableViewController.swift */; };
+		91F8080A1C5BA39C005906E9 /* buyStep4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F808091C5BA39C005906E9 /* buyStep4ViewController.swift */; };
 		91FFD42D1C4CA86400E93E72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD4291C4CA86400E93E72 /* Assets.xcassets */; };
 		91FFD42E1C4CA86400E93E72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FFD42A1C4CA86400E93E72 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -63,10 +69,16 @@
 		91E481351C574E9400F2C673 /* data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 		91E481371C58585200F2C673 /* MyOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrderTableViewCell.swift; sourceTree = "<group>"; };
 		91E4813B1C58A1DD00F2C673 /* UserLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		91E4813D1C59135800F2C673 /* auth_token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = auth_token.swift; sourceTree = "<group>"; };
+		91E4813F1C59192A00F2C673 /* PostOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostOrder.swift; sourceTree = "<group>"; };
 		91E8E5341C4D123C002E587A /* Strawman-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Strawman-Bridging-Header.h"; sourceTree = "<group>"; };
 		91E8E58E1C4D29D5002E587A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		91F00A531C53D19B005A9F66 /* VegeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VegeTableViewController.swift; sourceTree = "<group>"; };
 		91F00A551C53DE4F005A9F66 /* vegeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vegeTableViewCell.swift; sourceTree = "<group>"; };
+		91F808011C5A6865005906E9 /* buyStep2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buyStep2ViewController.swift; sourceTree = "<group>"; };
+		91F808051C5B07E4005906E9 /* buyStep3TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buyStep3TableViewCell.swift; sourceTree = "<group>"; };
+		91F808071C5B0F4D005906E9 /* butStep3TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = butStep3TableViewController.swift; sourceTree = "<group>"; };
+		91F808091C5BA39C005906E9 /* buyStep4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buyStep4ViewController.swift; sourceTree = "<group>"; };
 		91FFD4141C4CA81000E93E72 /* Strawman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strawman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FFD4291C4CA86400E93E72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91FFD42A1C4CA86400E93E72 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,12 +112,16 @@
 			isa = PBXGroup;
 			children = (
 				917CEB4D1C50B76F0092AE88 /* FbLoginViewController.swift */,
+				917CEB541C50B76F0092AE88 /* AboutMetableViewController.swift */,
+				917CEB4E1C50B76F0092AE88 /* BuyStep1ViewController.swift */,
+				91F808011C5A6865005906E9 /* buyStep2ViewController.swift */,
+				91F808071C5B0F4D005906E9 /* butStep3TableViewController.swift */,
+				91F808091C5BA39C005906E9 /* buyStep4ViewController.swift */,
+				91F808051C5B07E4005906E9 /* buyStep3TableViewCell.swift */,
 				917CEB6B1C50BAD20092AE88 /* LoginViewController.swift */,
 				915114041C53265400148A81 /* UserQRcodeViewController.swift */,
 				917CEB5A1C50B76F0092AE88 /* MyOrderTableViewController.swift */,
 				91E481371C58585200F2C673 /* MyOrderTableViewCell.swift */,
-				917CEB541C50B76F0092AE88 /* AboutMetableViewController.swift */,
-				917CEB4E1C50B76F0092AE88 /* BuyStep1ViewController.swift */,
 				917CEB4F1C50B76F0092AE88 /* AboutMeNavController.swift */,
 				917CEB501C50B76F0092AE88 /* MapViewController.swift */,
 				917CEB511C50B76F0092AE88 /* tabBarController.swift */,
@@ -146,6 +162,8 @@
 			children = (
 				917CEB4C1C50B72A0092AE88 /* view */,
 				91AD20101C4CB4A5004A6480 /* Main.storyboard */,
+				91E4813D1C59135800F2C673 /* auth_token.swift */,
+				91E4813F1C59192A00F2C673 /* PostOrder.swift */,
 				91AD1FE81C4CB2BA004A6480 /* AppDelegate.swift */,
 				91E481351C574E9400F2C673 /* data.swift */,
 				91E4813B1C58A1DD00F2C673 /* UserLocation.swift */,
@@ -297,10 +315,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91F808021C5A6865005906E9 /* buyStep2ViewController.swift in Sources */,
 				917CEB5C1C50B76F0092AE88 /* FbLoginViewController.swift in Sources */,
 				915114051C53265400148A81 /* UserQRcodeViewController.swift in Sources */,
 				917CEB681C50B76F0092AE88 /* CookMovieViewController.swift in Sources */,
+				91F808061C5B07E4005906E9 /* buyStep3TableViewCell.swift in Sources */,
 				917CEB601C50B76F0092AE88 /* tabBarController.swift in Sources */,
+				91F808081C5B0F4D005906E9 /* butStep3TableViewController.swift in Sources */,
 				91F00A561C53DE4F005A9F66 /* vegeTableViewCell.swift in Sources */,
 				917CEB631C50B76F0092AE88 /* AboutMetableViewController.swift in Sources */,
 				917CEB641C50B76F0092AE88 /* CookOnlieTableViewController.swift in Sources */,
@@ -310,13 +331,16 @@
 				91E4813C1C58A1DD00F2C673 /* UserLocation.swift in Sources */,
 				917CEB5D1C50B76F0092AE88 /* BuyStep1ViewController.swift in Sources */,
 				917CEB5F1C50B76F0092AE88 /* MapViewController.swift in Sources */,
+				91E4813E1C59135800F2C673 /* auth_token.swift in Sources */,
 				917CEB5E1C50B76F0092AE88 /* AboutMeNavController.swift in Sources */,
+				91F8080A1C5BA39C005906E9 /* buyStep4ViewController.swift in Sources */,
 				917CEB671C50B76F0092AE88 /* ForCookNavController.swift in Sources */,
 				917CEB621C50B76F0092AE88 /* MyAnnotation.swift in Sources */,
 				917CEB6C1C50BAD20092AE88 /* LoginViewController.swift in Sources */,
 				917CEB691C50B76F0092AE88 /* MyOrderTableViewController.swift in Sources */,
 				91F00A541C53D19B005A9F66 /* VegeTableViewController.swift in Sources */,
 				917CEB611C50B76F0092AE88 /* F-BLoginViewController-old.swift in Sources */,
+				91E481401C59192A00F2C673 /* PostOrder.swift in Sources */,
 				91E481361C574E9400F2C673 /* data.swift in Sources */,
 				91E481381C58585200F2C673 /* MyOrderTableViewCell.swift in Sources */,
 				917CEB6A1C50B76F0092AE88 /* MyDataViewController.swift in Sources */,

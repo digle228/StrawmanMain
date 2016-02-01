@@ -14,7 +14,7 @@ import SwiftyJSON
 class FbLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     
-    var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//    var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     
     @IBOutlet weak var FBLoginButton: FBSDKLoginButton!
@@ -34,7 +34,7 @@ class FbLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     
     override func viewWillAppear(animated: Bool) {
-        checkUser()
+//        checkUser()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,11 +63,11 @@ class FbLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         }else {
             postDataToServer()
             
-            let alert = UIAlertController(title: "成功", message: "登入頁面", preferredStyle: UIAlertControllerStyle.Alert )
-            let callAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Destructive, handler: { action in })
-            alert.addAction(callAction)
-            self.dismissViewControllerAnimated(true, completion: nil)
-            
+//            let alert = UIAlertController(title: "成功", message: "登入頁面", preferredStyle: UIAlertControllerStyle.Alert )
+//            let callAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Destructive, handler: { action in })
+//            alert.addAction(callAction)
+//            self.dismissViewControllerAnimated(true, completion: nil)
+//            
             
         }
         
@@ -84,13 +84,14 @@ class FbLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         let LoginPage = self.storyboard?.instantiateViewControllerWithIdentifier("FBLoginViewController")
         
-        if self.appDelegate.auth_token != ""  {
+        if auth_token != ""  {
+            
             self.dismissViewControllerAnimated(true, completion: nil)
 
             
         } else {
             
-//            self.presentViewController(LoginPage!, animated: true, completion: nil)
+            self.presentViewController(LoginPage!, animated: true, completion: nil)
             
         }
         
@@ -137,19 +138,44 @@ class FbLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 let responseJson = JSON(data)
                 let token = data["auth_token"] as? String
                 let message = data["message"] as? String
-                self.appDelegate.auth_token = token!
-                print(token)
+                print("\(responseJson)\(message)")
+                auth_token = token!
                 
+                let alert = UIAlertController(title: "成功", message: "登入頁面", preferredStyle: UIAlertControllerStyle.Alert )
+//                let callAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Destructive, handler: { action in })
+                let callAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Destructive) {
+                    (action) in
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+                alert.addAction(callAction)
+                self.presentViewController(alert, animated: true, completion: nil)
+//                self.dismissViewControllerAnimated(true, completion: nil)
+                
+
+                
+
             case .Failure(let error):
                 print("\(error)")
-                //  TODO:      400, 401, 404, 500 print("Request failed with error: \(error)")
-                
+
             }
+            
+        }
+        
+       }
+    
+    
+    
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if  segue.identifier == "Detail"{
             
         }
     }
     
-    
+
+
+
     //        Alamofire.request(.POST, apiPath, parameters: dic, encoding: .JSON).responseJSON { response in
     //    switch response.result {
     //        case .Success(let data):
@@ -165,16 +191,16 @@ class FbLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     
     func loginButton(FbLoginBu: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        appDelegate.auth_token = ""
+        auth_token = String()
         print("User Logged In")
         if result.token != nil{
-            appDelegate.auth_token = result.token.tokenString
+            auth_token = result.token.tokenString
                 self.dismissViewControllerAnimated(false, completion: nil)
                 
             }
             
     }
-
+    
 
 //        print("LoingPage\(appDelegate.auth_token)")
 //        appDelegate.auth_token = result.token.tokenString
@@ -201,7 +227,7 @@ class FbLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButtonDidLogOut(FbLoginBu: FBSDKLoginButton!) {
         print("User Logged Out")
-        appDelegate.auth_token = ""
+        auth_token = String()
 
     }
     
@@ -238,3 +264,4 @@ class FbLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
 
 }
+

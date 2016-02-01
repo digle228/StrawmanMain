@@ -12,20 +12,23 @@ import FBSDKLoginKit
 class BuyStep1ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var textLabel: UILabel!
-    var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
+    var arr  = []
     
-    var arr : NSArray = []
+    var people = Int()
+    
+    @IBOutlet weak var PickPeopleNumber: UIPickerView!
     
     //判斷FB使用者是否登入
     func checkUser(){
-        //        let buyVegetable = self.storyboard?.instantiateViewControllerWithIdentifier("BuyStep1ViewController")
+//                let buyVegetable = self.storyboard?.instantiateViewControllerWithIdentifier("BuyStep1ViewController")
         
         let LoginPage = self.storyboard?.instantiateViewControllerWithIdentifier("FBLoginViewController")
+        
+        if auth_token != ""  {
+            
+//            self.dismissViewControllerAnimated(true, completion: nil)
 
-        if self.appDelegate.auth_token != ""  {
-            
-            
         } else {
             
             self.presentViewController(LoginPage!, animated: true, completion: nil)
@@ -34,14 +37,17 @@ class BuyStep1ViewController: UIViewController, UIPickerViewDataSource, UIPicker
         
     }
     
+    
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
         checkUser()
 
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         arr = ["幸福小倆口","全家草幸福"]
         
         //(約1-2人份，每週四到六餐)(3-4人份，每週四到六餐)
@@ -51,7 +57,6 @@ class BuyStep1ViewController: UIViewController, UIPickerViewDataSource, UIPicker
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     
     //picker設定
@@ -67,14 +72,33 @@ class BuyStep1ViewController: UIViewController, UIPickerViewDataSource, UIPicker
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if row == 0 {
             textLabel.text = "【約1-2人份，每週四到六餐】"
-        }else{
-            textLabel.text = "【約3-4人份，每週四到六餐】"
-            textLabel.textColor = UIColor.blackColor()
+        }else {
+            row == 1
+            self.textLabel.text = "【約3-4人份，每週四到六餐】"
+            self.textLabel.textColor = UIColor.blackColor()
 
         }
-        
         return "\(arr[row])"
     }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let itemselect = arr[row]
+        let people = itemselect
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        let peopleNum = self.PickPeopleNumber.numberOfComponents
+//        let peoplePick = self.arr[peopleNum]!
+//        print(people)
+        if  segue.identifier == "Step2"{
+            let buyStep2 = segue.destinationViewController as! buyStep2ViewController
+         buyStep2.peoplenumInStep2 = people
+        
+        }
+        
+    }
+
     /*
     // MARK: - Navigation
     

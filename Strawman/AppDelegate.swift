@@ -17,10 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    var auth_token = String()
-    var message = String()
-    let delegate = UIApplication.sharedApplication().delegate as? AppDelegate
-    
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 

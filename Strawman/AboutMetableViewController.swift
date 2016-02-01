@@ -12,22 +12,36 @@ import QRCode
 import FBSDKLoginKit
 
 class AboutMetableViewController: UITableViewController {
+    
+    
     @IBOutlet weak var QrcodeImage: UIImageView!
 
-    
-    var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    @IBAction func mailService(sender: AnyObject) {UIApplication.sharedApplication().openURL(NSURL(string:
+        "mailto:digle228@gmail.com")!)
+    }
 
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func callService(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string:
+            "tel://0938025295")!)
+    }
+    override func viewWillAppear(animated: Bool) {
+        checkUser()
+        
+    }
+    func qrCode(){
         QrcodeImage.image = {
-            var qrCode = QRCode(appDelegate.auth_token)!
+            var qrCode = QRCode(auth_token)!
+            
             //            qrCode.size = self.QrcodeImage.bounds.size
             //            qrCode.color = CIColor(rgba: "FFCD0C")
             qrCode.backgroundColor = CIColor(rgba: "FFCD0C")
             qrCode.errorCorrection = .High
             return qrCode.image }()
-         print("我的token\(appDelegate.auth_token)")
+        print("我的token AboutMetableViewController.swift  \(auth_token)")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
 
         
@@ -39,7 +53,10 @@ class AboutMetableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    override func viewDidAppear(animated: Bool) {
+        qrCode()
 
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -53,9 +70,10 @@ class AboutMetableViewController: UITableViewController {
         
         let fbLoginPage = self.storyboard?.instantiateViewControllerWithIdentifier("FBLoginViewController")
         
-        if self.appDelegate.auth_token != "" {
+        if auth_token != "" {
             //            self.presentViewController(buyVegetable!, animated: true, completion: nil)
-            
+            //            self.dismissViewControllerAnimated(true, completion: nil)
+
             
         } else {
             self.presentViewController(fbLoginPage!, animated: true, completion: nil)
@@ -66,10 +84,7 @@ class AboutMetableViewController: UITableViewController {
         
     }
     
-    override func viewWillAppear(animated: Bool) {
-        checkUser()
-        
-    }
+
 
     // MARK: - Table view data source
     /*

@@ -102,7 +102,7 @@ class VegeTableViewController: UITableViewController {
         let photoFile = vege["image"] as? PFFile
         let urlStr = photoFile?.url
         let url = NSURL(string: urlStr!)
-        let vegeimageView = cell.vegeImage as! UIImageView
+        let vegeimageView = cell.vegeImage as UIImageView
         vegeimageView.sd_setImageWithURL(url, placeholderImage: nil)
         
         //        let roger = vege["RogerThat"] as? PFFile

@@ -1,40 +1,41 @@
 //
-//  UserQRcodeViewController.swift
+//  buyStep2ViewController.swift
 //  Strawman
 //
-//  Created by wusuchen on 2016/1/23.
+//  Created by wusuchen on 2016/1/28.
 //  Copyright © 2016年 alphacamp. All rights reserved.
 //
 
 import UIKit
-import Parse
-import QRCode
 
-class UserQRcodeViewController: UIViewController {
-    @IBOutlet weak var QrcodeImage: UIImageView!
+class buyStep2ViewController: UIViewController {
+   
+    var peoplenumInStep2: AnyObject!
 
 
- 
+    @IBOutlet weak var datePicker: UIDatePicker!
     
+    
+    @IBAction func datePickerAction(sender: AnyObject) {
+    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        QrcodeImage.image = {
-            var qrCode = QRCode(auth_token)!
-//            qrCode.size = self.QrcodeImage.bounds.size
-//            qrCode.color = CIColor(rgba: "FFCD0C")
-            qrCode.backgroundColor = CIColor(rgba: "FFCD0C")
-            qrCode.errorCorrection = .High
-            return qrCode.image }()
-        
-    
-    }
+//        self.tabBarController?.hidesBottomBarWhenPushed = false
         // Do any additional setup after loading the view.
-
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
     
 
     /*

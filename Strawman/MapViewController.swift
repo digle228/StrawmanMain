@@ -88,7 +88,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
         }
     }
-
+    
     
     //目前使用者的位置
     
@@ -127,10 +127,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                     let address = user["address"] as! String
                     let coordinate = CLLocationCoordinate2DMake(location.latitude, location.longitude)
                     print(coordinate)
-                    self.annotation.title = name + mobile
-                    self.annotation.subtitle = address
-                    self.annotation.coordinate = CLLocationCoordinate2DMake(location.latitude, location.longitude)
-                    var locationadd = self.mapView.addAnnotation(self.annotation)
+                    let userAnnotation = MKPointAnnotation()
+                    userAnnotation.title = name + mobile
+                    userAnnotation.subtitle = address
+                    userAnnotation.coordinate = CLLocationCoordinate2DMake(location.latitude, location.longitude)
+                    var locationadd = self.mapView.addAnnotation(userAnnotation)
                     
                 }
             }
@@ -153,18 +154,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
     }
     
-
     
-
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         showUserslocationFromParse()
-
         
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255, green: 204/255, blue: 50/255, alpha: 1)
         //        var notification:UILocalNotification = UILocalNotification()
         //        notification.alertBody = "熱門訊息通知!"
         //        notification.fireDate = NSDate(timeIntervalSinceNow: 1)
@@ -181,18 +182,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         NSTimer.scheduledTimerWithTimeInterval(3600, target: self, selector: "showLocation:", userInfo: nil, repeats: true)
-
         
         
-        let vege = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.1336, 121.5650), title: "維尼爸", subtitle: "聯絡維尼爸" )
-        let vege1 = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.044477, 121.532619), title: "桔森", subtitle: "聯絡桔森" )
-        let vege2 = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.045655, 121.531010), title: "大野狼的家", subtitle: "聯絡大野狼" )
-        let vege3 = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.045767, 121.532609), title: "小咪咪的家", subtitle: "聯絡咪咪")
-        
-        self.mapView.addAnnotation(vege)
-        self.mapView.addAnnotation(vege1)
-        self.mapView.addAnnotation(vege2)
-        self.mapView.addAnnotation(vege3)
+//        
+//        let vege = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.1336, 121.5650), title: "維尼爸", subtitle: "聯絡維尼爸" )
+//        let vege1 = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.044477, 121.532619), title: "桔森", subtitle: "聯絡桔森" )
+//        let vege2 = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.045655, 121.531010), title: "大野狼的家", subtitle: "聯絡大野狼" )
+//        let vege3 = MyAnnotation(coordinate: CLLocationCoordinate2DMake(25.045767, 121.532609), title: "小咪咪的家", subtitle: "聯絡咪咪")
+//        
+//        self.mapView.addAnnotation(vege)
+//        self.mapView.addAnnotation(vege1)
+//        self.mapView.addAnnotation(vege2)
+//        self.mapView.addAnnotation(vege3)
         
         
         
